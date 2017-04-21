@@ -1,0 +1,370 @@
+-- $Id$
+-----------------------------------------------------------------------
+-- Upvalued Lua API.
+-----------------------------------------------------------------------
+-- Functions
+local _G = getfenv(0)
+local pairs = _G.pairs;
+-- Libraries
+-- ----------------------------------------------------------------------------
+-- AddOn namespace.
+-- ----------------------------------------------------------------------------
+local FOLDER_NAME, private = ...
+local LibStub = _G.LibStub
+local L = LibStub("AceLocale-3.0"):GetLocale(private.addon_name);
+
+local function GetLocaleLibBabble(typ)
+	local rettab = {}
+	local tab = LibStub(typ):GetBaseLookupTable()
+	local loctab = LibStub(typ):GetUnstrictLookupTable()
+	for k,v in pairs(loctab) do
+		rettab[k] = v;
+	end
+	for k,v in pairs(tab) do
+		if not rettab[k] then
+			rettab[k] = v;
+		end
+	end
+	return rettab;
+end
+local BZ = GetLocaleLibBabble("LibBabble-SubZone-3.0");
+local function mapFile(mapID)
+	return HandyNotes:GetMapIDtoMapFile(mapID)
+end
+
+local DB = {}
+
+private.DB = DB
+
+DB.points = {
+	--[[ structure:
+	[mapFile] = { -- "_terrain1" etc will be stripped from attempts to fetch this
+		[coord] = {
+			label = [string], 		-- label: text that'll be the label, optional
+			npc = [id], 				-- related npc id, used to display names in tooltip
+			type = [string], 			-- the pre-define icon type which can be found in Constant.lua
+			class = [CLASS NAME],		-- specified the class name so that this node will only be available for this class
+			note=[string],			-- additional notes for this node
+		},
+	},
+	--]]
+	["Suramar"] = { -- Suramar
+		-- Class specified nodes
+		[33084820] = { -- Warrior
+			label = format(L["Portal to %s"], BZ["Skyhold"]), 
+			type = "portal", 
+			class = "WARRIOR" 
+		},
+		[33435044] = { -- Mage
+			label = L["Teleportation Nexus"],
+			note = format(L["Portal to %s"], BZ["Hall of the Guardian"]), 
+			type = "portal", 
+			class = "MAGE" 
+		},
+		[70207105] = { -- Hunter
+			label = L["Great Eagle"], 
+			npc = 109572, 
+			type = "flight", 
+			class = "HUNTER" 
+		},
+		[41328282] = { -- Hunter
+			label = L["Great Eagle"], 
+			npc = 109572, 
+			type = "flight", 
+			class = "HUNTER" 
+		},
+		-- Common nodes
+		-- Ruins of Elune'eth
+		[36094727] = {  
+			quest = 40956, 
+			label = L["Portal"],
+			note = BZ["Ruins of Elune'eth"], 
+			type = "portal", 
+			hide_before = 40956, 
+			hide_indoor = true, -- Ruins of Elune'eth node is a bit overlaped with Shal'Aran, so hide indoor would be better
+		},
+		[36344493] = {  
+			quest = 40956, 
+			label = format(L["Portal to %s"], BZ["Ruins of Elune'eth"]), 
+			type = "portal", 
+			hide_before = 40956, 
+			hide_outdoor = true,
+			scale = 0.6,
+		},
+		-- Falanaar
+		[22903580] = { -- Falanaar has another map, so this is the entrance in Suramar map
+			quest = 42230, 
+			type = "door",
+			label = BZ["Falanaar"],
+			note = L["Entrance"].." - "..BZ["Falanaar"].."\n"..format(L["Portal to %s"], BZ["Shal'Aran"]), 
+			hide_before = 42228, 
+			--hide_indoor = true,
+		}, 
+		[35894555] = { 
+			quest = 42230, 
+			label = format(L["Portal to %s"], BZ["Falanaar"]), 
+			type = "portal", 
+			hide_before = 42228, 
+			hide_outdoor = true, 
+			scale = 0.6,
+		}, 
+		-- Waning Crescent
+		[47748138] = { 
+			quest = 42487, 
+			label = L["Portal"],
+			note = BZ["The Waning Crescent"], 
+			type = "portal", 
+			hide_after = 43569, 
+			hide_before = 42486, 
+		}, 
+		[36504474] = { 
+			quest = 42487, 
+			label = format(L["Portal to %s"], BZ["The Waning Crescent"]), 
+			type = "portal", 
+			hide_after = 43569, 
+			hide_before = 42486, 
+			hide_outdoor = true, 
+			scale = 0.6,
+		}, 
+		-- Twilight Vineyards
+		[64006043] = { 
+			quest = 44084, 
+			label = L["Portal"],
+			note = BZ["Twilight Vineyards"], 
+			type = "portal", 
+			hide_before = 42838, 
+		}, 
+		[36944500] = {
+			quest = 44084, 
+			label = format(L["Portal to %s"], BZ["Twilight Vineyards"]), 
+			type = "portal", 
+			hide_before = 42838, 
+			hide_outdoor = true,
+			scale = 0.6,
+		}, 
+		-- Evermoon Terrace
+		[51997875] = { 
+			quest = 42889, 
+			label = L["Portal"],
+			note = BZ["Evermoon Terrace"], 
+			type = "portal", 
+			hide_before = 43569, 
+		}, 
+		[36504475] = {
+			quest = 42889, 
+			label = format(L["Portal to %s"], BZ["Evermoon Terrace"]), 
+			type = "portal", 
+			hide_before = 43569, 
+			hide_outdoor = true,
+			scale = 0.6,
+		}, 
+		-- Astravar Harbor
+		[54486944] = { 
+			quest = 44740, 
+			label = L["Portal"],
+			note = BZ["Astravar Harbor"], 
+			type = "portal", 
+			hide_before = 44738, 
+		}, 
+		[36764504] = { 
+			quest = 44740, 
+			label = format(L["Portal to %s"], BZ["Astravar Harbor"]), 
+			type = "portal", 
+			hide_before = 44738, 
+			hide_outdoor = true,
+			scale = 0.6,
+		}, 
+		-- Moon Guard Stronghold
+		[30831103] = { 
+			quest = 43808, 
+			label = L["Portal"],
+			note = BZ["Moonfall Overlook"], 
+			type = "portal", 
+			hide_before = 40956, 
+		}, 
+		[36004524] = {
+			quest = 43808, 
+			label = format(L["Portal to %s"], BZ["Moonfall Overlook"]), 
+			type = "portal", 
+			hide_before = 40956, 
+			hide_outdoor = true,
+			scale = 0.6,
+		}, 
+		-- Moon Guard (entrance)
+		[27802230] = { 
+			quest = 43808, 
+			type = "door",
+			label = BZ["Moonfall Overlook"], 
+			note = L["Entrance"],
+			hide_before = 40956, 
+		}, 
+		-- Tel'anor
+		[42023523] = { 
+			quest = 43809, 
+			label = L["Portal"],
+			note = BZ["Tel'anor"], 
+			type = "portal", 
+			hide_before = 40956, 
+		},
+		[36924466] = { 
+			quest = 43809, 
+			label = format(L["Portal to %s"], BZ["Tel'anor"]), 
+			type = "portal", 
+			hide_before = 40956, 
+			hide_outdoor = true,
+			scale = 0.6,
+		},
+		-- Sanctum of Order
+		[43406057] = { 
+			quest = 43813, 
+			label = BZ["Sanctum of Order"], 
+			type = "portal", 
+			hide_before = 40956, 
+			hide_outdoor = true, -- hide outdoor as we will show the entrance to Sanctum of Order
+		}, 
+		[36694465] = { 
+			quest = 43813, 
+			label = format(L["Portal to %s"], BZ["Sanctum of Order"]), 
+			type = "portal", 
+			hide_before = 40956, 
+			hide_outdoor = true,
+			scale = 0.6,
+		}, 
+		[43366232] = {
+			quest = 43813, 
+			type = "door",
+			label = BZ["Sanctum of Order"], 
+			note = L["Entrance"].." - "..BZ["The Grand Promenade"].."\n"..format(L["Portal to %s"], BZ["Shal'Aran"]),
+			hide_before = 40956, 
+			hide_indoor = true,
+		}, 
+		[45856450] = {
+			quest = 43813, 
+			type = "door",
+			label = BZ["Sanctum of Order"], 
+			note = L["Entrance"].." - "..BZ["Sanctum of Order"].."\n"..format(L["Portal to %s"], BZ["Shal'Aran"]),
+			hide_before = 40956, 
+			hide_indoor = true,
+		}, 
+		-- Lunastre Estate
+		[43697924] = { 
+			quest = 43811, 
+			label = BZ["Lunastre Estate"], 
+			type = "portal", 
+			hide_before = 40956, 
+		}, 
+		[36154504] = { 
+			quest = 43811, 
+			label = format(L["Portal to %s"], BZ["Lunastre Estate"]), 
+			type = "portal", 
+			hide_before = 40956, 
+			hide_outdoor = true,
+			scale = 0.6,
+		}, 
+		-- Felsoul Hold
+		[35808210] = { -- Felsoul Hold has another map, so here we show the entrance of Felsoul Hold
+			quest = 41575, 
+			type = "door",
+			label = BZ["Felsoul Hold"], 
+			note = L["Entrance"].." - "..BZ["Felsoul Hold"].."\n"..format(L["Portal to %s"], BZ["Shal'Aran"]), 
+			hide_before = 40956, 
+		}, 
+		[36104574] = { 
+			quest = 41575, 
+			label = format(L["Portal to %s"], BZ["Felsoul Hold"]), 
+			type = "portal", 
+			hide_before = 40956, 
+			hide_outdoor = true,
+			scale = 0.6,
+		}, 
+		-- Oculeth's related telemancies
+		[49414689] = {
+			quest = 40011, -- quest: Oculeth's Workshop
+			label = BZ["Oculeth's Workshop"],
+			type = "portal",
+			note = L["Telemancy to: \n  o Garden\n  - Test Chamber"],
+			hide_before = 42229, -- quest: Shal'Aran
+		},
+		[55793973] = {
+			quest = 40011, -- quest: The Delicate Art of Telemancy. The actual quest ID is 40747 but this node should be useful and available once completed 40011.
+			label = BZ["Warpwind Cliffs"].." - "..L["Garden"],
+			note = L["Telemancy to: \n  o Fountain\n  o Warp Lab\n  - Library"],
+			type = "portal",
+			hide_before = 40011, -- quest: Shal'Aran. 
+		},
+		[54244446] = {
+			quest = 40011, -- quest: The Delicate Art of Telemancy. The actual quest ID is 40747 but this node should be useful and available once completed 40011.
+			label = BZ["Warpwind Cliffs"].." - "..L["Fountain"],
+			note = L["Telemancy to: \n  o Telemetry Lab\n  o Garden\n  x Breakfast Nook"],
+			type = "portal",
+			hide_before = 40011, -- quest: Shal'Aran. 
+		},
+		[53083682] = {
+			quest = 40011, -- quest: The Delicate Art of Telemancy. The actual quest ID is 40747 but this node should be useful and available once completed 40011.
+			label = BZ["Warpwind Cliffs"].." - "..L["Telemetry Lab"],
+			note = L["Telemancy to: \n  o Fountain"],
+			type = "portal",
+			hide_before = 40011, -- quest: Shal'Aran. 
+		},
+		[52134511] = {
+			quest = 40011, -- quest: The Delicate Art of Telemancy. The actual quest ID is 40747 but this node should be useful and available once completed 40011.
+			label = BZ["Warpwind Cliffs"].." - "..L["Warp Lab"],
+			note = L["Telemancy to: \n  o Workshop"],
+			type = "portal",
+			hide_before = 40011, -- quest: Shal'Aran. 
+		},
+		[59733667] = {
+			quest = 40011, -- quest: The Delicate Art of Telemancy. The actual quest ID is 40747 but this node should be useful and available once completed 40011.
+			label = BZ["Oculeth's Test Chamber"],
+			note = L["Telemancy to: \n  o Workshop"],
+			type = "portal",
+			hide_before = 40011, -- quest: Shal'Aran. 
+		},
+		[56342741] = {
+			quest = 40011, -- quest: The Delicate Art of Telemancy. The actual quest ID is 40747 but this node should be useful and available once completed 40011.
+			label = BZ["The Drift"].." - "..L["Library"],
+			type = "yellowButton",
+			hide_before = 40011, -- quest: Shal'Aran. 
+		},
+		[55383549] = {
+			quest = 40011, -- quest: The Delicate Art of Telemancy. The actual quest ID is 40747 but this node should be useful and available once completed 40011.
+			label = BZ["Warpwind Cliffs"].." - "..L["Outside of The Drift"],
+			note = L["Telemancy to: \n  - Storage"],
+			type = "portal",
+			hide_before = 40011, -- quest: Shal'Aran. 
+		},
+		[57973505] = {
+			quest = 40011, -- quest: The Delicate Art of Telemancy. The actual quest ID is 40747 but this node should be useful and available once completed 40011.
+			label = BZ["Warpwind Cliffs"].." - "..L["Storage"],
+			note = L["Telemancy to: \n  - Garden"],
+			type = "portal",
+			hide_before = 40011, -- quest: Shal'Aran. 
+		},
+		-- End of Oculeth's related telemancies
+		[55333463] = {
+			label = BZ["The Drift"],
+			note = L["Entrance"],
+			type = "door",
+		},
+	},
+	["FalanaarTunnels"] = { -- Falanaar / Fal'adore
+		[40941368] = { 
+			quest = 42230, 
+			label = format(L["Portal to %s"], BZ["Shal'Aran"]),
+			level = 32, 
+			type = "portal", 
+			hide_before = 42228,
+			hide_outdoor = true,
+		}, 
+	},
+	["SuramarLegionScar"] = { -- Felsoul Hold / The Fel Breach
+		[53733676] = { 
+			quest = 41575, 
+			label = format(L["Portal to %s"], BZ["Shal'Aran"]),
+			level = 23,
+			type = "portal", 
+			hide_before = 40956,
+			hide_outdoor = true,
+		}, 
+	},
+}

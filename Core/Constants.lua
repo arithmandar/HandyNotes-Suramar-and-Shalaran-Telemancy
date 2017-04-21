@@ -1,0 +1,61 @@
+-- $Id$
+-----------------------------------------------------------------------
+-- Upvalued Lua API.
+-----------------------------------------------------------------------
+-- Functions
+local _G = getfenv(0)
+-- Libraries
+-- ----------------------------------------------------------------------------
+-- AddOn namespace.
+-- ----------------------------------------------------------------------------
+local FOLDER_NAME, private = ...
+private.addon_name = "HandyNotes_SuramarShalAranTelemancy"
+
+local LibStub = _G.LibStub
+local L = LibStub("AceLocale-3.0"):GetLocale(private.addon_name)
+
+local constants = {}
+private.constants = constants
+
+constants.defaults = {
+	profile = {
+		show_npcs = true,
+		icon_scale = 1.5,
+		icon_alpha = 1.0,
+		query_server = true,
+		show_note = true,
+		ignore_InOutDoor = false,
+	},
+	char = {
+		hidden = {
+			['*'] = {},
+		},
+	},
+}
+
+constants.icon_texture = {
+	flight = "Interface\\MINIMAP\\TRACKING\\FlightMaster",
+	yellowButton = "Interface\\AddOns\\HandyNotes_LegionClassOrderHalls\\Images\\YellowButton",
+	mission = "Interface\\AddOns\\HandyNotes_LegionClassOrderHalls\\Images\\Mission",
+	--portal = "Interface\\AddOns\\HandyNotes_LegionClassOrderHalls\\Images\\Portal",
+	portal = {
+		icon = 1121272,
+		tCoordLeft = 0.33203125,
+		tCoordRight = 0.39453125,
+		tCoordTop = 0.1953125,
+		tCoordBottom = 0.2578125,
+	},
+	door = "Interface\\MINIMAP\\Suramar_Door_Icon",
+}
+
+-- Define the default icon here
+constants.defaultIcon = constants.icon_texture["portal"]
+
+constants.events = {
+	"ZONE_CHANGED",
+	"ZONE_CHANGED_INDOORS",
+	-- Fires when stepping off of a world map object. 
+	-- Appears to fire whenever the player has moved off of a structure 
+	-- such as a bridge or building and onto terrain or another object.
+	"NEW_WMO_CHUNK",
+};

@@ -29,8 +29,8 @@ L["QUERY"] = "從伺服器查詢 NPC 名稱"
 L["QUERY_DESC"] = "向伺服器送出查詢 NPC 名稱的請求。首次查詢名稱時可能會顯示稍慢，一旦查詢到或該名稱已有快取時則會立即顯示。"
 L["SHOWNOTE"] = "顯示節點說明"
 L["SHOWNOTE_DESC"] = "當節點有額外說明時，同時顯示該說明"
-L["INOUTDOOR"] = "Ignore in-/out-door"
-L["INOUTDOOR_DESC"] = "Ignore whether it is currently indoor or outdoor, show all nodes"
+L["INOUTDOOR"] = "忽略室內外設定"
+L["INOUTDOOR_DESC"] = "忽略目前是否在室內或室外的差異，一律顯示所有節點"
 
 -- //////////////////////////
 -- Common
@@ -47,8 +47,25 @@ L["Great Eagle"] = "巨鷹"
 -- //////////////////////////
 -- Mage
 -- //////////////////////////
-L["Teleportation Nexus"] = "Teleportation Nexus"
+L["Teleportation Nexus"] = "傳送網路"
 
+-- //////////////////////////
+-- Others
+-- //////////////////////////
+L["Garden"] = "花園"
+L["Fountain"] = "噴泉"
+L["Telemetry Lab"] = "遙距勘測實驗室"
+L["Warp Lab"] = "躍傳實驗室"
+L["Library"] = "圖書館"
+L["Outside of The Drift"] = "幻時之境"
+L["Storage"] = "儲藏室"
+L["Telemancy to: \n  o Garden\n  - Test Chamber"] = "傳送到：\n  o 花園\n  - 試驗室"
+L["Telemancy to: \n  o Fountain\n  o Warp Lab\n  - Library"] = "傳送到：\n  o 噴泉\n  o 躍傳實驗室\n  - 圖書館"
+L["Telemancy to: \n  o Telemetry Lab\n  o Garden\n  x Breakfast Nook"] = "傳送到：\n  o 遙距勘測實驗室\n  o 花園\n  x 早餐角落"
+L["Telemancy to: \n  o Fountain"] = "傳送到：\n  o 噴泉"
+L["Telemancy to: \n  o Workshop"] = "傳送到：\n  o 工坊"
+L["Telemancy to: \n  - Storage"] = "傳送到：\n  - 儲藏室"
+L["Telemancy to: \n  - Garden"] = "傳送到：\n  - 花園"
 --@end-do-not-package@
 --@localization(locale="zhTW", format="lua_additive_table")@
 end

@@ -3,6 +3,12 @@ $Id$
 Revision History:
 =================
 
+* v1.01 (Apr. 24, 2017)
+-----------------------
+- Localization  update
+  - German (pas06)
+  - Simplified Chinese
+
 * v1.00 (Apr. 21, 2017)
 -----------------------
 - Initial version which support WoW 7.2.0

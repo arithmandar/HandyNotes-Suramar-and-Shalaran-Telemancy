@@ -35,9 +35,7 @@ constants.defaults = {
 
 constants.icon_texture = {
 	flight = "Interface\\MINIMAP\\TRACKING\\FlightMaster",
-	yellowButton = "Interface\\AddOns\\HandyNotes_LegionClassOrderHalls\\Images\\YellowButton",
-	mission = "Interface\\AddOns\\HandyNotes_LegionClassOrderHalls\\Images\\Mission",
-	--portal = "Interface\\AddOns\\HandyNotes_LegionClassOrderHalls\\Images\\Portal",
+	yellowButton = "Interface\\AddOns\\HandyNotes_SuramarShalAranTelemancy\\Images\\YellowButton",
 	portal = {
 		icon = 1121272,
 		tCoordLeft = 0.33203125,

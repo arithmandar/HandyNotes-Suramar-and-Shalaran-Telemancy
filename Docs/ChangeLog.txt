@@ -3,6 +3,10 @@ $Id$
 Revision History:
 =================
 
+* v1.03 (Apr. 25, 2017)
+-----------------------
+- Fixed the wrong texture path issue
+
 * v1.02 (Apr. 24, 2017)
 -----------------------
 - Added cave's entrance

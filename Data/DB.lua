@@ -346,6 +346,111 @@ DB.points = {
 			note = L["Entrance"],
 			type = "door",
 		},
+		-- Entrance of caves or special indoor space
+		[41733894] = { 
+			type = "door",
+			label = format(L["Entrance of %s"], BZ["Ley Station Anora"]), 
+		}, 
+		[35632405] = { 
+			type = "door",
+			label = format(L["Entrance of %s"], BZ["Ley Station Moonfall"]), 
+		}, 
+		[24231934] = { 
+			type = "door",
+			label = format(L["Entrance of %s"], BZ["Ley Station Aethenar"]), 
+		}, 
+		[29068463] = { 
+			type = "door",
+			label = format(L["Entrance of %s"], BZ["Halls of the Eclipse"]), 
+		}, 
+		[34678438] = { 
+			type = "door",
+			label = format(L["Entrance of %s"], BZ["The Arcway Vaults"]), 
+		}, 
+		[34437382] = { 
+			type = "door",
+			label = format(L["Entrance of %s"], BZ["Felmaw Cavern"]), 
+		}, 
+		[36587675] = { 
+			type = "door",
+			label = format(L["Entrance of %s"], BZ["The Fel Breach"]), 
+		}, 
+		[36587675] = { 
+			type = "door",
+			label = format(L["Entrance of %s"], BZ["The Fel Breach"]), 
+		}, 
+		[20555049] = { 
+			type = "door",
+			label = format(L["Entrance of %s"], BZ["Falanaar Tunnels"]), 
+		}, 
+		[27167251] = { 
+			type = "door",
+			label = format(L["Entrance of %s"], BZ["Den of the Demented"]), 
+		}, 
+		[54714602] = { 
+			type = "door",
+			label = format(L["Entrance of %s"], BZ["Teloth'aran"]), 
+		}, 
+		[59234273] = { 
+			type = "door",
+			label = format(L["Entrance of %s"], BZ["Kel'balor"]), 
+		}, 
+		[65854188] = { 
+			type = "door",
+			label = format(L["Entrance of %s"], BZ["Elor'shan"]), 
+		}, 
+		[73046779] = { 
+			type = "door",
+			label = format(L["Entrance of %s"], BZ["Azuregale Cove"]), 
+		}, 
+		[49613380] = { 
+			type = "door",
+			label = L["Entrance"], 
+		}, 
+		[35903449] = { 
+			type = "door",
+			label = L["Entrance"], 
+		}, 
+		[23755104] = { 
+			type = "door",
+			label = L["Entrance"], 
+		}, 
+		[24365092] = { 
+			type = "door",
+			label = L["Entrance"], 
+		}, 
+		[30235497] = { 
+			type = "door",
+			label = L["Entrance"], 
+		}, 
+		[38139062] = { 
+			type = "door",
+			label = L["Entrance"], 
+		}, 
+		[42372999] = { 
+			type = "door",
+			label = L["Entrance"], 
+		}, 
+		[40412933] = { 
+			type = "door",
+			label = L["Entrance"], 
+		}, 
+		[19301895] = { 
+			type = "door",
+			label = L["Entrance"], 
+		}, 
+		[25326382] = { 
+			type = "door",
+			label = L["Entrance"], 
+		}, 
+		[28495615] = { 
+			type = "door",
+			label = L["Entrance"], 
+		}, 
+		[61643958] = { 
+			type = "door",
+			label = L["Entrance"], 
+		}, 
 	},
 	["FalanaarTunnels"] = { -- Falanaar / Fal'adore
 		[40941368] = { 
@@ -365,6 +470,14 @@ DB.points = {
 			type = "portal", 
 			hide_before = 40956,
 			hide_outdoor = true,
+		}, 
+		[24609004] = { 
+			type = "door",
+			label = format(L["Entrance of %s"], BZ["Felsoul Hold"]), 
+		}, 
+		[29514112] = { 
+			type = "door",
+			label = format(L["Entrance of %s"], BZ["The Fel Breach"]), 
 		}, 
 	},
 }

@@ -5,7 +5,8 @@ Revision History:
 
 * v1.01 (Apr. 24, 2017)
 -----------------------
-- Localization  update
+- Added cave's entrance
+- Localization update
   - German (pas06)
   - Simplified Chinese
 

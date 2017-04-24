@@ -37,6 +37,7 @@ L["INOUTDOOR_DESC"] = "Ignore whether it is currently indoor or outdoor, show al
 L["Portal to %s"] = "Portal to %s"
 L["Portal"] = "Portal"
 L["Entrance"] = "Entrance"
+L["Entrance of %s"] = "Entrance of %s"
 
 -- //////////////////////////
 -- Hunter

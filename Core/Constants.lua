@@ -25,6 +25,8 @@ constants.defaults = {
 		query_server = true,
 		show_note = true,
 		ignore_InOutDoor = false,
+		show_telemetryLab = true,
+		show_unspecifiedEntrances = true,
 	},
 	char = {
 		hidden = {

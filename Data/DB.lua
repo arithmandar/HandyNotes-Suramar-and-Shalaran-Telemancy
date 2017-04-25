@@ -53,12 +53,14 @@ DB.points = {
 		[33084820] = { -- Warrior
 			label = format(L["Portal to %s"], BZ["Skyhold"]), 
 			type = "portal", 
-			class = "WARRIOR" 
+			scale = 0.8,
+			class = "WARRIOR", 
 		},
 		[33435044] = { -- Mage
 			label = L["Teleportation Nexus"],
 			note = format(L["Portal to %s"], BZ["Hall of the Guardian"]), 
 			type = "portal", 
+			scale = 0.8,
 			class = "MAGE" 
 		},
 		[70207105] = { -- Hunter
@@ -284,6 +286,7 @@ DB.points = {
 			type = "portal",
 			note = L["Telemancy to: \n  o Garden\n  - Test Chamber"],
 			hide_before = 42229, -- quest: Shal'Aran
+			isTelemetryLabRelated = true,
 		},
 		[55793973] = {
 			quest = 40011, -- quest: The Delicate Art of Telemancy. The actual quest ID is 40747 but this node should be useful and available once completed 40011.
@@ -291,6 +294,7 @@ DB.points = {
 			note = L["Telemancy to: \n  o Fountain\n  o Warp Lab\n  - Library"],
 			type = "portal",
 			hide_before = 40011, -- quest: Shal'Aran. 
+			isTelemetryLabRelated = true,
 		},
 		[54244446] = {
 			quest = 40011, -- quest: The Delicate Art of Telemancy. The actual quest ID is 40747 but this node should be useful and available once completed 40011.
@@ -298,6 +302,7 @@ DB.points = {
 			note = L["Telemancy to: \n  o Telemetry Lab\n  o Garden\n  x Breakfast Nook"],
 			type = "portal",
 			hide_before = 40011, -- quest: Shal'Aran. 
+			isTelemetryLabRelated = true,
 		},
 		[53083682] = {
 			quest = 40011, -- quest: The Delicate Art of Telemancy. The actual quest ID is 40747 but this node should be useful and available once completed 40011.
@@ -305,6 +310,7 @@ DB.points = {
 			note = L["Telemancy to: \n  o Fountain"],
 			type = "portal",
 			hide_before = 40011, -- quest: Shal'Aran. 
+			isTelemetryLabRelated = true,
 		},
 		[52134511] = {
 			quest = 40011, -- quest: The Delicate Art of Telemancy. The actual quest ID is 40747 but this node should be useful and available once completed 40011.
@@ -312,6 +318,7 @@ DB.points = {
 			note = L["Telemancy to: \n  o Workshop"],
 			type = "portal",
 			hide_before = 40011, -- quest: Shal'Aran. 
+			isTelemetryLabRelated = true,
 		},
 		[59733667] = {
 			quest = 40011, -- quest: The Delicate Art of Telemancy. The actual quest ID is 40747 but this node should be useful and available once completed 40011.
@@ -319,12 +326,14 @@ DB.points = {
 			note = L["Telemancy to: \n  o Workshop"],
 			type = "portal",
 			hide_before = 40011, -- quest: Shal'Aran. 
+			isTelemetryLabRelated = true,
 		},
 		[56342741] = {
 			quest = 40011, -- quest: The Delicate Art of Telemancy. The actual quest ID is 40747 but this node should be useful and available once completed 40011.
 			label = BZ["The Drift"].." - "..L["Library"],
 			type = "yellowButton",
 			hide_before = 40011, -- quest: Shal'Aran. 
+			isTelemetryLabRelated = true,
 		},
 		[55383549] = {
 			quest = 40011, -- quest: The Delicate Art of Telemancy. The actual quest ID is 40747 but this node should be useful and available once completed 40011.
@@ -332,6 +341,7 @@ DB.points = {
 			note = L["Telemancy to: \n  - Storage"],
 			type = "portal",
 			hide_before = 40011, -- quest: Shal'Aran. 
+			isTelemetryLabRelated = true,
 		},
 		[57973505] = {
 			quest = 40011, -- quest: The Delicate Art of Telemancy. The actual quest ID is 40747 but this node should be useful and available once completed 40011.
@@ -339,12 +349,14 @@ DB.points = {
 			note = L["Telemancy to: \n  - Garden"],
 			type = "portal",
 			hide_before = 40011, -- quest: Shal'Aran. 
+			isTelemetryLabRelated = true,
 		},
 		-- End of Oculeth's related telemancies
 		[55333463] = {
 			label = BZ["The Drift"],
 			note = L["Entrance"],
 			type = "door",
+			isTelemetryLabRelated = true,
 		},
 		-- Entrance of caves or special indoor space
 		[41733894] = { 
@@ -403,53 +415,72 @@ DB.points = {
 			type = "door",
 			label = format(L["Entrance of %s"], BZ["Azuregale Cove"]), 
 		}, 
+		[35114753] = { 
+			type = "door",
+			label = format(L["Entrance of %s"], BZ["Shal'Aran"]), 
+			scale = 0.8,
+			alpha = 0.8,
+		}, 
+		-- Entrances of undefined places
 		[49613380] = { 
 			type = "door",
 			label = L["Entrance"], 
+			isUnspecifiedEntrance = true,
 		}, 
 		[35903449] = { 
 			type = "door",
 			label = L["Entrance"], 
+			isUnspecifiedEntrance = true,
 		}, 
 		[23755104] = { 
 			type = "door",
 			label = L["Entrance"], 
+			isUnspecifiedEntrance = true,
 		}, 
 		[24365092] = { 
 			type = "door",
 			label = L["Entrance"], 
+			isUnspecifiedEntrance = true,
 		}, 
 		[30235497] = { 
 			type = "door",
 			label = L["Entrance"], 
+			isUnspecifiedEntrance = true,
 		}, 
 		[38139062] = { 
 			type = "door",
 			label = L["Entrance"], 
+			isUnspecifiedEntrance = true,
 		}, 
 		[42372999] = { 
 			type = "door",
 			label = L["Entrance"], 
+			isUnspecifiedEntrance = true,
 		}, 
 		[40412933] = { 
 			type = "door",
 			label = L["Entrance"], 
+			isUnspecifiedEntrance = true,
 		}, 
 		[19301895] = { 
 			type = "door",
 			label = L["Entrance"], 
+			isUnspecifiedEntrance = true,
 		}, 
 		[25326382] = { 
 			type = "door",
 			label = L["Entrance"], 
+			isUnspecifiedEntrance = true,
 		}, 
 		[28495615] = { 
 			type = "door",
 			label = L["Entrance"], 
+			isUnspecifiedEntrance = true,
 		}, 
 		[61643958] = { 
 			type = "door",
 			label = L["Entrance"], 
+			isUnspecifiedEntrance = true,
 		}, 
 	},
 	["FalanaarTunnels"] = { -- Falanaar / Fal'adore

@@ -78,7 +78,18 @@ config.options = {
 					desc = L["INOUTDOOR_DESC"],
 					order = 12,
 				},
-				unhide = {
+				show_telemetryLab = {
+					type = "toggle",
+					name = L["SHOW_TELEMETRY_LAB"],
+					desc = L["SHOW_TELEMETRY_LAB_DESC"],
+					order = 13,
+				},
+				show_unspecifiedEntrances = {
+					type = "toggle",
+					name = L["SHOW_ENTRANCES"],
+					desc = L["SHOW_ENTRANCES_DESC"],
+					order = 14,
+				},				unhide = {
 					type = "execute",
 					name = L["Reset hidden nodes"],
 					desc = L["Show all nodes that you manually hid by right-clicking on them and choosing \"hide\"."],

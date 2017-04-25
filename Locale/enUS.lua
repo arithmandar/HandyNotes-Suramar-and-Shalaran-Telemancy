@@ -27,9 +27,13 @@ L["Show all nodes that you manually hid by right-clicking on them and choosing \
 L["QUERY"] = "Query NPC name from server"
 L["QUERY_DESC"] = "Send query request to server to lookup NPC's localized name. May be a little bit slower for the first time lookup but would be very fast once the name is found and cached. "
 L["SHOWNOTE"] = "Show node's note"
-L["SHOWNOTE_DESC"] = "Show the node's additional notes when it's available"
+L["SHOWNOTE_DESC"] = "Show the node's additional notes when it's available. "
 L["INOUTDOOR"] = "Ignore in-/out-door"
-L["INOUTDOOR_DESC"] = "Ignore whether it is currently indoor or outdoor, show all nodes"
+L["INOUTDOOR_DESC"] = "Ignore whether it is currently indoor or outdoor, show all nodes. "
+L["SHOW_TELEMETRY_LAB"] = "Show Telemetry Lab"
+L["SHOW_TELEMETRY_LAB_DESC"] = "Show Telemetry Lab related telemancies, mainly quest related from Oculeth's quest: \"The Delicate Art of Telemancy\". "
+L["SHOW_ENTRANCES"] = "Show All Entrances"
+L["SHOW_ENTRANCES_DESC"] = "Show all entrances which are not specified more precisely."
 
 -- //////////////////////////
 -- Common

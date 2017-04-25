@@ -31,7 +31,7 @@ _G.HandyNotes_SuramarShalAranTelemancy = addon;
 
 -- //////////////////////////////////////////////////////////////////////////
 local function work_out_texture(point)
-	if (point.type) then
+	if (point.type and private.constants.icon_texture[point.type]) then
 		return private.constants.icon_texture[point.type]
 	-- use the icon specified in point data
 	elseif (point.icon) then
@@ -62,7 +62,7 @@ local get_point_info = function(point)
 			icon = work_out_texture(point)
 		end
 
-		return label, icon, point.scale
+		return label, icon, point.scale, point.alpha
 	end
 end
 
@@ -81,7 +81,7 @@ local function handle_tooltip(tooltip, point)
 			end
 		end
 		if (point.note and private.db.show_note) then
-			tooltip:AddLine(point.note, nil, nil, nil, true)
+			tooltip:AddLine("("..point.note..")", nil, nil, nil, true)
 		end
 	else
 		tooltip:SetText(UNKNOWN)
@@ -200,9 +200,10 @@ do
 		local state, value = next(t, prestate)
 		while state do -- Have we reached the end of this zone?
 			if value and private:ShouldShow(state, value, currentZone, currentLevel) then
-				local label, icon, scale = get_point_info(value)
+				local label, icon, scale, alpha = get_point_info(value)
 				scale = (scale or 1) * (icon and icon.scale or 1) * private.db.icon_scale
-				return state, nil, icon, scale, private.db.icon_alpha
+				alpha = (alpha or 1) * (icon and icon.alpha or 1) * private.db.icon_alpha
+				return state, nil, icon, scale, alpha
 			end
 			state, value = next(t, state) -- Get next data
 		end
@@ -227,6 +228,12 @@ do
 		if (point.hide_outdoor and not private.db.ignore_InOutDoor and IsOutdoors()) then
 			return false
 		end
+		if (point.isTelemetryLabRelated and not private.db.show_telemetryLab) then
+			return false
+		end
+		if (point.isUnspecifiedEntrance and not private.db.show_unspecifiedEntrances) then
+ 			return false
+		end
 		if (point.hide_after and IsQuestFlaggedCompleted(point.hide_after)) then
 			return false
 		end
@@ -247,8 +254,6 @@ function addon:OnInitialize()
 	
 	private.db = self.db.profile
 	private.hidden = self.db.char.hidden
-
-	self.db.RegisterCallback(self, "OnProfileChanged", "Refresh")
 
 	-- Initialize database with HandyNotes
 	HandyNotes:RegisterPluginDB(private.addon_name:gsub("HandyNotes_", ""), PluginHandler, private.config.options)

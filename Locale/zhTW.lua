@@ -28,9 +28,13 @@ L["Show all nodes that you manually hid by right-clicking on them and choosing \
 L["QUERY"] = "從伺服器查詢 NPC 名稱"
 L["QUERY_DESC"] = "向伺服器送出查詢 NPC 名稱的請求。首次查詢名稱時可能會顯示稍慢，一旦查詢到或該名稱已有快取時則會立即顯示。"
 L["SHOWNOTE"] = "顯示節點說明"
-L["SHOWNOTE_DESC"] = "當節點有額外說明時，同時顯示該說明"
+L["SHOWNOTE_DESC"] = "當節點有額外說明時，同時顯示該說明。"
 L["INOUTDOOR"] = "忽略室內外設定"
-L["INOUTDOOR_DESC"] = "忽略目前是否在室內或室外的差異，一律顯示所有節點"
+L["INOUTDOOR_DESC"] = "忽略目前是否在室內或室外的差異，一律顯示所有節點。"
+-- L["SHOW_TELEMETRY_LAB"] = "Show Telemetry Lab"
+-- L["SHOW_TELEMETRY_LAB_DESC"] = "Show Telemetry Lab related telemancies, mainly quest related from Oculeth's quest: \"The Delicate Art of Telemancy\". "
+L["SHOW_ENTRANCES"] = "顯示所有入口"
+L["SHOW_ENTRANCES_DESC"] = "顯示所有不明洞穴的入口。"
 
 -- //////////////////////////
 -- Common
@@ -38,6 +42,7 @@ L["INOUTDOOR_DESC"] = "忽略目前是否在室內或室外的差異，一律顯
 L["Portal to %s"] = "到%s的傳送門"
 L["Portal"] = "傳送門"
 L["Entrance"] = "入口"
+L["Entrance of %s"] = "%s的入口"
 
 -- //////////////////////////
 -- Hunter

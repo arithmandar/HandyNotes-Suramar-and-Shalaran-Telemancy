@@ -3,6 +3,13 @@ $Id$
 Revision History:
 =================
 
+* v1.04 (Apr. xx, 2017)
+-----------------------
+- Added more showing options (suggested by FireEmerald)
+- Localization update:
+  - German (pas06)
+  - Russian (BLizzatron)
+
 * v1.03 (Apr. 25, 2017)
 -----------------------
 - Fixed the wrong texture path issue

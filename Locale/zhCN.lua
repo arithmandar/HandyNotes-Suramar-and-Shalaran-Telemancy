@@ -31,6 +31,12 @@ L["SHOWNOTE"] = "显示节点说明"
 L["SHOWNOTE_DESC"] = "当节点有额外说明时，同时显示该说明"
 L["INOUTDOOR"] = "忽略室内外设定"
 L["INOUTDOOR_DESC"] = "忽略目前是否在室内或室外的差异，一律显示所有节点"
+L["SHOW_LEYLINE"] = "显示脉能入口"
+L["SHOW_LEYLINE_DESC"] = "显示所有脉能站的入口。"
+L["SHOW_SPECIFIEDENTRANCES"] = "显示知名入口"
+L["SHOW_SPECIFIEDENTRANCES_DESC"] = "显示知名的洞穴或空间的入口。"
+L["SHOW_UNSPECIFIEDENTRANCES"] = "显示不明入口"
+L["SHOW_UNSPECIFIEDENTRANCES_DESC"] = "显示所有不明洞穴的入口。"
 
 -- //////////////////////////
 -- Common

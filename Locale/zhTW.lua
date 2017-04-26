@@ -33,8 +33,12 @@ L["INOUTDOOR"] = "忽略室內外設定"
 L["INOUTDOOR_DESC"] = "忽略目前是否在室內或室外的差異，一律顯示所有節點。"
 -- L["SHOW_TELEMETRY_LAB"] = "Show Telemetry Lab"
 -- L["SHOW_TELEMETRY_LAB_DESC"] = "Show Telemetry Lab related telemancies, mainly quest related from Oculeth's quest: \"The Delicate Art of Telemancy\". "
-L["SHOW_ENTRANCES"] = "顯示所有入口"
-L["SHOW_ENTRANCES_DESC"] = "顯示所有不明洞穴的入口。"
+L["SHOW_LEYLINE"] = "顯示脈能入口"
+L["SHOW_LEYLINE_DESC"] = "顯示所有脈能站的入口。"
+L["SHOW_SPECIFIEDENTRANCES"] = "顯示知名入口"
+L["SHOW_SPECIFIEDENTRANCES_DESC"] = "顯示知名的洞穴或空間的入口。"
+L["SHOW_UNSPECIFIEDENTRANCES"] = "顯示不明入口"
+L["SHOW_UNSPECIFIEDENTRANCES_DESC"] = "顯示所有不明洞穴的入口。"
 
 -- //////////////////////////
 -- Common

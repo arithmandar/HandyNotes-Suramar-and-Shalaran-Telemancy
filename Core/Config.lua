@@ -84,12 +84,25 @@ config.options = {
 					desc = L["SHOW_TELEMETRY_LAB_DESC"],
 					order = 13,
 				},
+				show_leyline = {
+					type = "toggle",
+					name = L["SHOW_LEYLINE"],
+					desc = L["SHOW_LEYLINE_DESC"],
+					order = 14,
+				},
+				show_specifiedEntrance = {
+					type = "toggle",
+					name = L["SHOW_SPECIFIEDENTRANCES"],
+					desc = L["SHOW_SPECIFIEDENTRANCES_DESC"],
+					order = 15,
+				},
 				show_unspecifiedEntrances = {
 					type = "toggle",
-					name = L["SHOW_ENTRANCES"],
-					desc = L["SHOW_ENTRANCES_DESC"],
-					order = 14,
-				},				unhide = {
+					name = L["SHOW_UNSPECIFIEDENTRANCES"],
+					desc = L["SHOW_UNSPECIFIEDENTRANCES_DESC"],
+					order = 16,
+				},
+				unhide = {
 					type = "execute",
 					name = L["Reset hidden nodes"],
 					desc = L["Show all nodes that you manually hid by right-clicking on them and choosing \"hide\"."],

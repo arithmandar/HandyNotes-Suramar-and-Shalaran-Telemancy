@@ -32,8 +32,12 @@ L["INOUTDOOR"] = "Ignore in-/out-door"
 L["INOUTDOOR_DESC"] = "Ignore whether it is currently indoor or outdoor, show all nodes. "
 L["SHOW_TELEMETRY_LAB"] = "Show Telemetry Lab"
 L["SHOW_TELEMETRY_LAB_DESC"] = "Show Telemetry Lab related telemancies, mainly quest related from Oculeth's quest: \"The Delicate Art of Telemancy\". "
-L["SHOW_ENTRANCES"] = "Show All Entrances"
-L["SHOW_ENTRANCES_DESC"] = "Show all entrances which are not specified more precisely."
+L["SHOW_LEYLINE"] = "Show Leyline Entrances"
+L["SHOW_LEYLINE_DESC"] = "Show entrances which lead to the leyline."
+L["SHOW_SPECIFIEDENTRANCES"] = "Show Specified Entrances"
+L["SHOW_SPECIFIEDENTRANCES_DESC"] = "Show the entrances which lead to known caves or space. "
+L["SHOW_UNSPECIFIEDENTRANCES"] = "Show Unspecified Entrances"
+L["SHOW_UNSPECIFIEDENTRANCES_DESC"] = "Show the entrances which are not specified more precisely."
 
 -- //////////////////////////
 -- Common

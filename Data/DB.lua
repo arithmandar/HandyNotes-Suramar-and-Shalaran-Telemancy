@@ -359,21 +359,46 @@ DB.points = {
 			isTelemetryLabRelated = true,
 		},
 		-- Entrance of caves or special indoor space
-		[41733894] = { 
+		-- Leyline related entrance
+		[41733894] = { -- Anora Hollow
 			type = "door",
+			leyline = true,
 			label = format(L["Entrance of %s"], BZ["Ley Station Anora"]), 
 		}, 
-		[35632405] = { 
+		[35632405] = { -- Moonwhisper Gulch
 			type = "door",
+			leyline = true,
 			label = format(L["Entrance of %s"], BZ["Ley Station Moonfall"]), 
 		}, 
-		[24231934] = { 
+		[24231934] = { -- Moon Guard
 			type = "door",
+			leyline = true,
 			label = format(L["Entrance of %s"], BZ["Ley Station Aethenar"]), 
+		}, 
+		[59234273] = { -- Kel'balor
+			type = "door",
+			leyline = true,
+			label = format(L["Entrance of %s"], BZ["Kel'balor"]), 
+		}, 
+		[65854188] = { -- Elor'shan
+			type = "door",
+			leyline = true,
+			label = format(L["Entrance of %s"], BZ["Elor'shan"]), 
 		}, 
 		[29068463] = { 
 			type = "door",
+			leyline = true,
 			label = format(L["Entrance of %s"], BZ["Halls of the Eclipse"]), 
+		}, 
+		[20555049] = { 
+			type = "door",
+			leyline = true,
+			label = format(L["Entrance of %s"], BZ["Falanaar Tunnels"]), 
+		}, 
+		[21374317] = { 
+			type = "door",
+			leyline = true,
+			label = format(L["Entrance of %s"], BZ["Falanaar Tunnels"]), 
 		}, 
 		[34678438] = { 
 			type = "door",
@@ -387,14 +412,6 @@ DB.points = {
 			type = "door",
 			label = format(L["Entrance of %s"], BZ["The Fel Breach"]), 
 		}, 
-		[36587675] = { 
-			type = "door",
-			label = format(L["Entrance of %s"], BZ["The Fel Breach"]), 
-		}, 
-		[20555049] = { 
-			type = "door",
-			label = format(L["Entrance of %s"], BZ["Falanaar Tunnels"]), 
-		}, 
 		[27167251] = { 
 			type = "door",
 			label = format(L["Entrance of %s"], BZ["Den of the Demented"]), 
@@ -402,14 +419,6 @@ DB.points = {
 		[54714602] = { 
 			type = "door",
 			label = format(L["Entrance of %s"], BZ["Teloth'aran"]), 
-		}, 
-		[59234273] = { 
-			type = "door",
-			label = format(L["Entrance of %s"], BZ["Kel'balor"]), 
-		}, 
-		[65854188] = { 
-			type = "door",
-			label = format(L["Entrance of %s"], BZ["Elor'shan"]), 
 		}, 
 		[73046779] = { 
 			type = "door",

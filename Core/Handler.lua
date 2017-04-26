@@ -58,6 +58,10 @@ local get_point_info = function(point)
 					tCoordBottom = bottom,
 				}
 			end
+		elseif (point.type and point.type == "door") then
+			if (not point.scale) then point.scale = 0.8 end
+			if (not point.alpha) then point.alpha = 0.8 end
+			icon = work_out_texture(point)
 		else
 			icon = work_out_texture(point)
 		end
@@ -233,6 +237,12 @@ do
 		end
 		if (point.isUnspecifiedEntrance and not private.db.show_unspecifiedEntrances) then
  			return false
+		end
+		if (point.leyline and not private.db.show_leyline) then
+			return false
+		end
+		if (point.type and point.type == "door" and not point.quest and not point.isTelemetryLabRelated and not point.isUnspecifiedEntrance and not point.leyline and not private.db.show_specifiedEntrance) then
+			return false
 		end
 		if (point.hide_after and IsQuestFlaggedCompleted(point.hide_after)) then
 			return false

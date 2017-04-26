@@ -27,6 +27,8 @@ constants.defaults = {
 		ignore_InOutDoor = false,
 		show_telemetryLab = true,
 		show_unspecifiedEntrances = true,
+		show_specifiedEntrance = true,
+		show_leyline = true,
 	},
 	char = {
 		hidden = {

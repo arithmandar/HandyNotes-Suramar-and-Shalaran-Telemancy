@@ -3,7 +3,7 @@ $Id$
 Revision History:
 =================
 
-* v1.04 (Apr. xx, 2017)
+* v1.04 (Apr. 26, 2017)
 -----------------------
 - Added more showing options (suggested by FireEmerald)
 - Localization update:

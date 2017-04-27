@@ -9,36 +9,41 @@ if L then
 -- //////////////////////////
 -- Addon
 -- //////////////////////////
-L["ADDON_NAME"] = "HandyNotes - 蘇拉瑪爾與沙亞蘭的傳送"
-L["PLUGIN_NAME"] = "蘇拉瑪爾與沙亞蘭的傳送"
-L["ADDON_DESC"] = "顯示在沙亞蘭與蘇拉瑪爾之間的各個傳送點位置"
+L["HandyNotes - Suramar & Shal'Aran Telemancy"] = "HandyNotes - 蘇拉瑪爾與沙亞蘭的傳送"
+L["Suramar & Shal'Aran Telemancy"] = "蘇拉瑪爾與沙亞蘭的傳送"
+L["Shows the telemancy between Shal'Aran and nodes in Suramar"] = "顯示在沙亞蘭與蘇拉瑪爾之間的各個傳送點位置"
 
 -- //////////////////////////
 -- Configs
 -- //////////////////////////
+-- Icon Settings
 L["These settings control the look and feel of the icon."] = "以下的設定控制了圖示的外觀及風格。"
 L["Icon settings"] = "圖示設定"
 L["Icon Scale"] = "圖示大小"
 L["The scale of the icons"] = "圖示的大小"
 L["Icon Alpha"] = "圖示透明度"
 L["The alpha transparency of the icons"] = "圖示的透明度"
+-- What to Display
 L["What to display"] = "哪些要被呈現"
+L["These settings control what type of icons to be displayed on the WorldMap and Minimap."] = "以下的設定控制了哪些類型的節點要被顯示在世界地圖與小地圖上。"
+--L["Telemetry Lab"] = "遙距勘測實驗室"
+L["Show Telemetry Lab related telemancies, mainly quest related from Oculeth's quest: \"The Delicate Art of Telemancy\"."] = "顯示遙距勘測實驗室相關的傳送點，主線任務為歐庫雷斯提供的：「傳送師的精湛技藝」。"
+L["Leyline Entrances"] = "脈能入口"
+L["Show entrances which lead to the leyline."] = "顯示所有脈能站的入口。"
+L["Specified Entrances"] = "知名入口"
+L["Show the entrances which lead to known caves or space."] = "顯示知名的洞穴或空間的入口。"
+L["Unspecified Entrances"] = "不明入口"
+L["Show the entrances which are not specified more precisely."] = "顯示所有不明洞穴的入口。"
+-- Plugin Config
+L["Plugin Config"] = "插件設定"
+L["Query from server"] = "向伺服器查詢"
+L["Send query request to server to lookup NPC's localized name. May be a little bit slower for the first time lookup but would be very fast once the name is found and cached."] = "向伺服器送出查詢 NPC 名稱的請求。首次查詢名稱時可能會顯示稍慢，一旦查詢到或該名稱已有快取時則會立即顯示。"
+L["Show note"] = "顯示說明"
+L["Show the node's additional notes when it's available."] = "當節點有額外說明時，同時顯示該說明。"
+L["Ignore in-/out-door"] = "忽略室內外"
+L["Ignore whether it is currently indoor or outdoor, show all nodes."] = "忽略目前是否在室內或室外的差異，一律顯示所有節點。"
 L["Reset hidden nodes"] = "重設所有被隱藏的節點"
 L["Show all nodes that you manually hid by right-clicking on them and choosing \"hide\"."] = "將您手動把 POI 設為隱藏的節點還原成全部都顯示。"
-L["QUERY"] = "從伺服器查詢 NPC 名稱"
-L["QUERY_DESC"] = "向伺服器送出查詢 NPC 名稱的請求。首次查詢名稱時可能會顯示稍慢，一旦查詢到或該名稱已有快取時則會立即顯示。"
-L["SHOWNOTE"] = "顯示節點說明"
-L["SHOWNOTE_DESC"] = "當節點有額外說明時，同時顯示該說明。"
-L["INOUTDOOR"] = "忽略室內外設定"
-L["INOUTDOOR_DESC"] = "忽略目前是否在室內或室外的差異，一律顯示所有節點。"
-L["SHOW_TELEMETRY_LAB"] = "顯示遙距勘測實驗室"
-L["SHOW_TELEMETRY_LAB_DESC"] = "顯示遙距勘測實驗室相關的傳送點，主線任務為歐庫雷斯提供的：「傳送師的精湛技藝」。"
-L["SHOW_LEYLINE"] = "顯示脈能入口"
-L["SHOW_LEYLINE_DESC"] = "顯示所有脈能站的入口。"
-L["SHOW_SPECIFIEDENTRANCES"] = "顯示知名入口"
-L["SHOW_SPECIFIEDENTRANCES_DESC"] = "顯示知名的洞穴或空間的入口。"
-L["SHOW_UNSPECIFIEDENTRANCES"] = "顯示不明入口"
-L["SHOW_UNSPECIFIEDENTRANCES_DESC"] = "顯示所有不明洞穴的入口。"
 
 -- //////////////////////////
 -- Common

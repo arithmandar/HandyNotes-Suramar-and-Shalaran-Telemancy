@@ -8,36 +8,41 @@ if L then
 -- //////////////////////////
 -- Addon
 -- //////////////////////////
-L["ADDON_NAME"] = "HandyNotes - Suramar & Shal'Aran Telemancy"
-L["PLUGIN_NAME"] = "Suramar & Shal'Aran Telemancy"
-L["ADDON_DESC"] = "Shows the telemancy between Shal'Aran and nodes in Suramar"
+L["HandyNotes - Suramar & Shal'Aran Telemancy"] = "HandyNotes - Suramar & Shal'Aran Telemancy"
+L["Suramar & Shal'Aran Telemancy"] = "Suramar & Shal'Aran Telemancy"
+L["Shows the telemancy between Shal'Aran and nodes in Suramar"] = "Shows the telemancy between Shal'Aran and nodes in Suramar"
 
 -- //////////////////////////
 -- Configs
 -- //////////////////////////
+-- Icon Settings
 L["These settings control the look and feel of the icon."] = "These settings control the look and feel of the icon."
 L["Icon settings"] = "Icon settings"
 L["Icon Scale"] = "Icon Scale"
 L["The scale of the icons"] = "The scale of the icons"
 L["Icon Alpha"] = "Icon Alpha"
 L["The alpha transparency of the icons"] = "The alpha transparency of the icons"
+-- What to Display
 L["What to display"] = "What to display"
+L["These settings control what type of icons to be displayed on the WorldMap and Minimap."] = "These settings control what type of icons to be displayed on the WorldMap and Minimap."
+--L["Telemetry Lab"] = "Telemetry Lab"
+L["Show Telemetry Lab related telemancies, mainly quest related from Oculeth's quest: \"The Delicate Art of Telemancy\"."] = "Show Telemetry Lab related telemancies, mainly quest related from Oculeth's quest: \"The Delicate Art of Telemancy\"."
+L["Leyline Entrances"] = "Leyline Entrances"
+L["Show entrances which lead to the leyline."] = "Show entrances which lead to the leyline."
+L["Specified Entrances"] = "Specified Entrances"
+L["Show the entrances which lead to known caves or space."] = "Show the entrances which lead to known caves or space."
+L["Unspecified Entrances"] = "Unspecified Entrances"
+L["Show the entrances which are not specified more precisely."] = "Show the entrances which are not specified more precisely."
+-- Plugin Config
+L["Plugin Config"] = "Plugin Config"
+L["Query from server"] = "Query from server"
+L["Send query request to server to lookup NPC's localized name. May be a little bit slower for the first time lookup but would be very fast once the name is found and cached."] = "Send query request to server to lookup NPC's localized name. May be a little bit slower for the first time lookup but would be very fast once the name is found and cached."
+L["Show note"] = "Show note"
+L["Show the node's additional notes when it's available."] = "Show the node's additional notes when it's available."
+L["Ignore in-/out-door"] = "Ignore in-/out-door"
+L["Ignore whether it is currently indoor or outdoor, show all nodes."] = "Ignore whether it is currently indoor or outdoor, show all nodes."
 L["Reset hidden nodes"] = "Reset hidden nodes"
 L["Show all nodes that you manually hid by right-clicking on them and choosing \"hide\"."] = "Show all nodes that you manually hid by right-clicking on them and choosing \"hide\"."
-L["QUERY"] = "Query NPC name from server"
-L["QUERY_DESC"] = "Send query request to server to lookup NPC's localized name. May be a little bit slower for the first time lookup but would be very fast once the name is found and cached. "
-L["SHOWNOTE"] = "Show node's note"
-L["SHOWNOTE_DESC"] = "Show the node's additional notes when it's available. "
-L["INOUTDOOR"] = "Ignore in-/out-door"
-L["INOUTDOOR_DESC"] = "Ignore whether it is currently indoor or outdoor, show all nodes. "
-L["SHOW_TELEMETRY_LAB"] = "Show Telemetry Lab"
-L["SHOW_TELEMETRY_LAB_DESC"] = "Show Telemetry Lab related telemancies, mainly quest related from Oculeth's quest: \"The Delicate Art of Telemancy\". "
-L["SHOW_LEYLINE"] = "Show Leyline Entrances"
-L["SHOW_LEYLINE_DESC"] = "Show entrances which lead to the leyline."
-L["SHOW_SPECIFIEDENTRANCES"] = "Show Specified Entrances"
-L["SHOW_SPECIFIEDENTRANCES_DESC"] = "Show the entrances which lead to known caves or space. "
-L["SHOW_UNSPECIFIEDENTRANCES"] = "Show Unspecified Entrances"
-L["SHOW_UNSPECIFIEDENTRANCES_DESC"] = "Show the entrances which are not specified more precisely."
 
 -- //////////////////////////
 -- Common

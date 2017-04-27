@@ -19,8 +19,8 @@ private.config = config
 
 config.options = {
 	type = "group",
-	name = L["PLUGIN_NAME"],
-	desc = L["ADDON_DESC"],
+	name = addon.pluginName,
+	desc = addon.description,
 	get = function(info) return private.db[info[#info]] end,
 	set = function(info, v)
 		private.db[info[#info]] = v
@@ -31,7 +31,7 @@ config.options = {
 			type = "group",
 			name = L["Icon settings"],
 			inline = true,
-			order = 1,
+			order = 10,
 			args = {
 				desc = {
 					name = L["These settings control the look and feel of the icon."],
@@ -58,49 +58,62 @@ config.options = {
 			type = "group",
 			name = L["What to display"],
 			inline = true,
-			order = 2,
+			order = 20,
 			args = {
-				query_server = {
-					type = "toggle",
-					name = L["QUERY"],
-					desc = L["QUERY_DESC"],
-					order = 10,
-				},
-				show_note = {
-					type = "toggle",
-					name = L["SHOWNOTE"],
-					desc = L["SHOWNOTE_DESC"],
-					order = 11,
-				},
-				ignore_InOutDoor = {
-					type = "toggle",
-					name = L["INOUTDOOR"],
-					desc = L["INOUTDOOR_DESC"],
-					order = 12,
+				desc = {
+					name = L["These settings control what type of icons to be displayed on the WorldMap and Minimap."],
+					type = "description",
+					order = 0,
 				},
 				show_telemetryLab = {
 					type = "toggle",
-					name = L["SHOW_TELEMETRY_LAB"],
-					desc = L["SHOW_TELEMETRY_LAB_DESC"],
+					name = L["Telemetry Lab"],
+					desc = L["Show Telemetry Lab related telemancies, mainly quest related from Oculeth's quest: \"The Delicate Art of Telemancy\"."],
 					order = 13,
 				},
 				show_leyline = {
 					type = "toggle",
-					name = L["SHOW_LEYLINE"],
-					desc = L["SHOW_LEYLINE_DESC"],
+					name = L["Leyline Entrances"],
+					desc = L["Show entrances which lead to the leyline."],
 					order = 14,
 				},
 				show_specifiedEntrance = {
 					type = "toggle",
-					name = L["SHOW_SPECIFIEDENTRANCES"],
-					desc = L["SHOW_SPECIFIEDENTRANCES_DESC"],
+					name = L["Specified Entrances"],
+					desc = L["Show the entrances which lead to known caves or space."],
 					order = 15,
 				},
 				show_unspecifiedEntrances = {
 					type = "toggle",
-					name = L["SHOW_UNSPECIFIEDENTRANCES"],
-					desc = L["SHOW_UNSPECIFIEDENTRANCES_DESC"],
+					name = L["Unspecified Entrances"],
+					desc = L["Show the entrances which are not specified more precisely."],
 					order = 16,
+				},
+			},
+		},
+		plugin_config = {
+			type = "group",
+			name = L["Plugin Config"],
+			inline = true,
+			order = 30,
+			args = {
+				query_server = {
+					type = "toggle",
+					name = L["Query from server"],
+					desc = L["Send query request to server to lookup NPC's localized name. May be a little bit slower for the first time lookup but would be very fast once the name is found and cached."],
+					order = 10,
+				},
+				show_note = {
+					type = "toggle",
+					name = L["Show note"],
+					desc = L["Show the node's additional notes when it's available."],
+					order = 11,
+				},
+				ignore_InOutDoor = {
+					type = "toggle",
+					name = L["Ignore in-/out-door"],
+					desc = L["Ignore whether it is currently indoor or outdoor, show all nodes."],
+					order = 12,
 				},
 				unhide = {
 					type = "execute",

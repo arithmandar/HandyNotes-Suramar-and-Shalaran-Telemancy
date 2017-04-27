@@ -26,6 +26,11 @@ local HandyNotes = LibStub("AceAddon-3.0"):GetAddon("HandyNotes")
 local addon = LibStub("AceAddon-3.0"):NewAddon(private.addon_name, "AceEvent-3.0")
 addon.constants = private.constants;
 addon.constants.addon_name = private.addon_name;
+
+addon.descName = L["HandyNotes - Suramar & Shal'Aran Telemancy"]
+addon.description = L["Shows the telemancy between Shal'Aran and nodes in Suramar"]
+addon.pluginName = L["Suramar & Shal'Aran Telemancy"]
+
 addon.Name = FOLDER_NAME;
 _G.HandyNotes_SuramarShalAranTelemancy = addon;
 

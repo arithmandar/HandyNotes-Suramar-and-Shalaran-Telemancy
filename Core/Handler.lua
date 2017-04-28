@@ -271,7 +271,7 @@ function addon:OnInitialize()
 	private.hidden = self.db.char.hidden
 
 	-- Initialize database with HandyNotes
-	HandyNotes:RegisterPluginDB(private.addon_name:gsub("HandyNotes_", ""), PluginHandler, private.config.options)
+	HandyNotes:RegisterPluginDB(addon.pluginName, PluginHandler, private.config.options)
 end
 
 function addon:OnEnable()
@@ -281,7 +281,7 @@ function addon:OnEnable()
 end
 
 function addon:Refresh()
-	self:SendMessage("HandyNotes_NotifyUpdate", private.addon_name:gsub("HandyNotes_", ""))
+	self:SendMessage("HandyNotes_NotifyUpdate", addon.pluginName)
 end
 
 function addon:ZONE_CHANGED()

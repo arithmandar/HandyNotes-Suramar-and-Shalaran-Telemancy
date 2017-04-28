@@ -24,7 +24,7 @@ config.options = {
 	get = function(info) return private.db[info[#info]] end,
 	set = function(info, v)
 		private.db[info[#info]] = v
-		addon:SendMessage("HandyNotes_NotifyUpdate", private.addon_name:gsub("HandyNotes_", ""))
+		addon:SendMessage("HandyNotes_NotifyUpdate", addon.pluginName)
 	end,
 	args = {
 		icon = {

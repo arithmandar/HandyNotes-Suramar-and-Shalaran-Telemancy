@@ -7,6 +7,7 @@ Revision History:
 -----------------------
 - Re-organized config options
 - Standardize localization key style
+- Changed the registered name to HandyNotes
 
 * v1.04 (Apr. 26, 2017)
 -----------------------

@@ -34,7 +34,7 @@ L["Show the entrances which lead to known caves or space."] = "Show the entrance
 L["Unspecified Entrances"] = "Unspecified Entrances"
 L["Show the entrances which are not specified more precisely."] = "Show the entrances which are not specified more precisely."
 -- AddOn Settings
-L["AddOn Settings"] = "Plugin Config"
+L["AddOn Settings"] = "AddOn Settings"
 L["Query from server"] = "Query from server"
 L["Send query request to server to lookup NPC's localized name. May be a little bit slower for the first time lookup but would be very fast once the name is found and cached."] = "Send query request to server to lookup NPC's localized name. May be a little bit slower for the first time lookup but would be very fast once the name is found and cached."
 L["Show note"] = "Show note"

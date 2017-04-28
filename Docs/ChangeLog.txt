@@ -8,6 +8,8 @@ Revision History:
 - Re-organized config options
 - Standardize localization key style
 - Changed the registered name to HandyNotes
+- Localization update:
+  - German (pas06, FireEmerald)
 
 * v1.04 (Apr. 26, 2017)
 -----------------------

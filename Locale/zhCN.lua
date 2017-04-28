@@ -25,15 +25,15 @@ L["Icon Alpha"] = "图示透明度"
 L["The alpha transparency of the icons"] = "图示的透明度"
 -- What to Display
 L["What to display"] = "哪些要被呈现"
-L["These settings control what type of icons to be displayed on the WorldMap and Minimap."] = "以下的设定控制了哪些类型的节点要被显示在世界地图与小地图上。"
+L["These settings control what type of icons to be displayed."] = "以下的设定控制了哪些类型的节点要被显示。"
 L["Leyline Entrances"] = "脉能入口"
 L["Show entrances which lead to the leyline."] = "显示所有脉能站的入口。"
 L["Specified Entrances"] = "知名入口"
 L["Show the entrances which lead to known caves or space."] = "显示知名的洞穴或空间的入口。"
-L["Unspecified Entrances"] = "显示不明入口"
+L["Unspecified Entrances"] = "不明入口"
 L["Show the entrances which are not specified more precisely."] = "显示所有不明洞穴的入口。"
--- Plugin Config
-L["Plugin Config"] = "插件设定"
+-- AddOn Settings
+L["AddOn Settings"] = "插件设定"
 L["Query from server"] = "从服务器查询 NPC 名称"
 L["Send query request to server to lookup NPC's localized name. May be a little bit slower for the first time lookup but would be very fast once the name is found and cached."] = "向服务器送出查询 NPC 名称的请求。首次查询名称时可能会显示稍慢，一旦查询到或该名称已有快取时则会立即显示。"
 L["Show note"] = "显示节点说明"
@@ -49,6 +49,8 @@ L["Show all nodes that you manually hid by right-clicking on them and choosing \
 L["Portal to %s"] = "到%s的传送门"
 L["Portal"] = "传送门"
 L["Entrance"] = "入口"
+L["Entrance of %s"] = "%s的入口"
+
 --@end-do-not-package@
 --@localization(locale="zhCN", format="lua_additive_table")@
 end

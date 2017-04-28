@@ -61,7 +61,7 @@ config.options = {
 			order = 20,
 			args = {
 				desc = {
-					name = L["These settings control what type of icons to be displayed on the WorldMap and Minimap."],
+					name = L["These settings control what type of icons to be displayed."],
 					type = "description",
 					order = 0,
 				},
@@ -93,7 +93,7 @@ config.options = {
 		},
 		plugin_config = {
 			type = "group",
-			name = L["Plugin Config"],
+			name = L["AddOn Settings"],
 			inline = true,
 			order = 30,
 			args = {

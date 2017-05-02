@@ -3,6 +3,14 @@ $Id$
 Revision History:
 =================
 
+* v1.06 (May 03, 2017)
+-----------------------
+- Revised the portals' displaying information
+- Added to retrieve spell name
+- Added config option to show / hide portals inside Shal'Aran
+- Localization update:
+  - Russian (BLizzatron)
+
 * v1.05 (Apr. 28, 2017)
 -----------------------
 - Re-organized config options

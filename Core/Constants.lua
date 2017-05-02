@@ -29,6 +29,7 @@ constants.defaults = {
 		show_unspecifiedEntrances = true,
 		show_specifiedEntrance = true,
 		show_leyline = true,
+		show_shalaran = true,
 	},
 	char = {
 		hidden = {

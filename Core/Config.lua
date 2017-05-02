@@ -65,6 +65,12 @@ config.options = {
 					type = "description",
 					order = 0,
 				},
+				show_shalaran = {
+					type = "toggle",
+					name = L["Shal'Aran Portals"],
+					desc = L["Show portals inside Shal'Aran"],
+					order = 12,
+				},
 				show_telemetryLab = {
 					type = "toggle",
 					name = L["Telemetry Lab"],

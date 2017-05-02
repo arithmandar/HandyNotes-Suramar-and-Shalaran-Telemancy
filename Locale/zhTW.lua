@@ -26,6 +26,8 @@ L["The alpha transparency of the icons"] = "圖示的透明度"
 -- What to Display
 L["What to display"] = "哪些要被呈現"
 L["These settings control what type of icons to be displayed."] = "以下的設定控制了哪些類型的節點要被顯示。"
+L["Shal'Aran Portals"] = "沙亞蘭傳送門"
+L["Show portals inside Shal'Aran."] = "顯示在沙亞蘭裡的傳送門位置。"
 --L["Telemetry Lab"] = "遙距勘測實驗室"
 L["Show Telemetry Lab related telemancies, mainly quest related from Oculeth's quest: \"The Delicate Art of Telemancy\"."] = "顯示遙距勘測實驗室相關的傳送點，主線任務為歐庫雷斯提供的：「傳送師的精湛技藝」。"
 L["Leyline Entrances"] = "脈能入口"

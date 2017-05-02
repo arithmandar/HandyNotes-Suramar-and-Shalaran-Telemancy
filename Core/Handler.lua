@@ -89,6 +89,12 @@ local function handle_tooltip(tooltip, point)
 				tooltip:AddLine(point.label)
 			end
 		end
+		if (point.spell) then
+			local spellName = GetSpellInfo(point.spell)
+			if (spellName) then
+				tooltip:AddLine(spellName, 1, 1, 1, true)
+			end
+		end
 		if (point.note and private.db.show_note) then
 			tooltip:AddLine("("..point.note..")", nil, nil, nil, true)
 		end
@@ -244,6 +250,9 @@ do
  			return false
 		end
 		if (point.leyline and not private.db.show_leyline) then
+			return false
+		end
+		if (point.shalaran and not private.db.show_shalaran) then
 			return false
 		end
 		if (point.type and point.type == "door" and not point.quest and not point.isTelemetryLabRelated and not point.isUnspecifiedEntrance and not point.leyline and not private.db.show_specifiedEntrance) then

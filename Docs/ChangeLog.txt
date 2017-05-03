@@ -9,6 +9,7 @@ Revision History:
 - Added to retrieve spell name
 - Added config option to show / hide portals inside Shal'Aran
 - Localization update:
+  - German (pas06)
   - Russian (BLizzatron)
 
 * v1.05 (Apr. 28, 2017)

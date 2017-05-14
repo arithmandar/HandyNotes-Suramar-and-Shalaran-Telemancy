@@ -83,5 +83,5 @@ L["Telemancy to: \n  o Workshop"] = "傳送到：\n  o 工坊"
 L["Telemancy to: \n  - Storage"] = "傳送到：\n  - 儲藏室"
 L["Telemancy to: \n  - Garden"] = "傳送到：\n  - 花園"
 --@end-do-not-package@
---@localization(locale="zhTW", format="lua_additive_table")@
+--@localization(locale="zhTW", format="lua_additive_table", handle-subnamespaces="none", handle-unlocalized="ignore", namespace="")@
 end

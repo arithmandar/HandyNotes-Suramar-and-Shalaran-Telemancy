@@ -24,12 +24,12 @@ local AceDB = LibStub("AceDB-3.0")
 
 local HandyNotes = LibStub("AceAddon-3.0"):GetAddon("HandyNotes")
 local addon = LibStub("AceAddon-3.0"):NewAddon(private.addon_name, "AceEvent-3.0")
-addon.constants = private.constants;
-addon.constants.addon_name = private.addon_name;
+addon.constants = private.constants
+addon.constants.addon_name = private.addon_name
 
-addon.descName = L["HandyNotes - Suramar & Shal'Aran Telemancy"]
-addon.description = L["Shows the telemancy between Shal'Aran and nodes in Suramar"]
-addon.pluginName = L["Suramar & Shal'Aran Telemancy"]
+addon.descName 		= private.descName
+addon.description 	= private.description
+addon.pluginName 	= private.pluginName
 
 addon.Name = FOLDER_NAME;
 _G.HandyNotes_SuramarShalAranTelemancy = addon;
@@ -71,7 +71,7 @@ local get_point_info = function(point)
 			icon = work_out_texture(point)
 		end
 
-		return label, icon, point.scale, point.alpha
+		return label, icon, point.scale, point.alpha, point.dungeonLevel
 	end
 end
 
@@ -137,7 +137,7 @@ local function hideNode(button, mapFile, coord)
 end
 
 local function closeAllDropdowns()
-	CloseDropDownMenus(1)
+	Lib_CloseDropDownMenus(1)
 end
 
 local function addTomTomWaypoint(button, mapFile, coord)
@@ -157,41 +157,40 @@ do
 	local currentZone, currentCoord
 	local function generateMenu(button, level)
 		if (not level) then return end
-		wipe(info)
 		if (level == 1) then
 			-- Create the title of the menu
-			info.isTitle	  = 1
-			info.text		 = "HandyNotes - " ..L["PLUGIN_NAME"]
-			info.notCheckable = 1
-			UIDropDownMenu_AddButton(info, level)
-			wipe(info)
+			info = Lib_UIDropDownMenu_CreateInfo()
+			info.isTitle 		= 1
+			info.text 		= "HandyNotes - " ..L["PLUGIN_NAME"]
+			info.notCheckable 	= 1
+			Lib_UIDropDownMenu_AddButton(info, level)
 
 			if TomTom then
 				-- Waypoint menu item
+				info = Lib_UIDropDownMenu_CreateInfo()
 				info.text = LH["Add this location to TomTom waypoints"]
 				info.notCheckable = 1
 				info.func = addTomTomWaypoint
 				info.arg1 = currentZone
 				info.arg2 = currentCoord
-				UIDropDownMenu_AddButton(info, level)
-				wipe(info)
+				Lib_UIDropDownMenu_AddButton(info, level)
 			end
 
-			 -- Hide menu item
+			-- Hide menu item
+			info = Lib_UIDropDownMenu_CreateInfo()
 			info.text		 = HIDE 
 			info.notCheckable = 1
 			info.func		 = hideNode
 			info.arg1		 = currentZone
 			info.arg2		 = currentCoord
-			UIDropDownMenu_AddButton(info, level)
-			wipe(info)
+			Lib_UIDropDownMenu_AddButton(info, level)
 
 			-- Close menu item
+			info = Lib_UIDropDownMenu_CreateInfo()
 			info.text		 = CLOSE
 			info.func		 = closeAllDropdowns
 			info.notCheckable = 1
-			UIDropDownMenu_AddButton(info, level)
-			wipe(info)
+			Lib_UIDropDownMenu_AddButton(info, level)
 		end
 	end
 	local HL_Dropdown = CreateFrame("Frame", private.addon_name.."DropdownMenu")
@@ -202,7 +201,7 @@ do
 		if button == "RightButton" and not down then
 			currentZone = string.gsub(mapFile, "_terrain%d+$", "")
 			currentCoord = coord
-			ToggleDropDownMenu(1, nil, HL_Dropdown, self, 0, 0)
+			Lib_ToggleDropDownMenu(1, nil, HL_Dropdown, self, 0, 0)
 		end
 	end
 end
@@ -215,14 +214,14 @@ do
 		local state, value = next(t, prestate)
 		while state do -- Have we reached the end of this zone?
 			if value and private:ShouldShow(state, value, currentZone, currentLevel) then
-				local label, icon, scale, alpha = get_point_info(value)
+				local label, icon, scale, alpha, dungeonLevel = get_point_info(value)
 				scale = (scale or 1) * (icon and icon.scale or 1) * private.db.icon_scale
 				alpha = (alpha or 1) * (icon and icon.alpha or 1) * private.db.icon_alpha
-				return state, nil, icon, scale, alpha
+				return state, nil, icon, scale, alpha, dungeonLevel or 0
 			end
 			state, value = next(t, state) -- Get next data
 		end
-		return nil, nil, nil, nil
+		return nil, nil, nil, nil, nil, nil
 	end
 	function PluginHandler:GetNodes(mapFile, minimap, level)
 		currentLevel = level
@@ -234,7 +233,7 @@ do
 		if (private.hidden[currentZone] and private.hidden[currentZone][coord]) then
 			return false
 		end
-		if (point.level and point.level ~= currentLevel) then
+		if (point.dungeonLevel and point.dungeonLevel ~= currentLevel) then
 			return false
 		end
 		if (point.hide_indoor and not private.db.ignore_InOutDoor and IsIndoors()) then

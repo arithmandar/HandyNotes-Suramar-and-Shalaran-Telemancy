@@ -13,6 +13,9 @@ private.addon_name = "HandyNotes_SuramarShalAranTelemancy"
 
 local LibStub = _G.LibStub
 local L = LibStub("AceLocale-3.0"):GetLocale(private.addon_name)
+private.descName = L["HandyNotes - Suramar & Shal'Aran Telemancy"]
+private.description = L["Shows the telemancy between Shal'Aran and nodes in Suramar"]
+private.pluginName = L["Suramar & Shal'Aran Telemancy"]
 
 local constants = {}
 private.constants = constants
@@ -40,7 +43,9 @@ constants.defaults = {
 
 constants.icon_texture = {
 	flight = "Interface\\MINIMAP\\TRACKING\\FlightMaster",
-	yellowButton = "Interface\\AddOns\\HandyNotes_SuramarShalAranTelemancy\\Images\\YellowButton",
+	yellowButton = {
+		icon = "Interface\\MINIMAP\\OBJECTICONS",
+		tCoordLeft = 0.125, tCoordRight = 0.25, tCoordTop = 0.5, tCoordBottom = 0.625 },
 	portal = {
 		icon = 1121272,
 		tCoordLeft = 0.33203125,

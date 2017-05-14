@@ -3,6 +3,14 @@ $Id$
 Revision History:
 =================
 
+* v1.07 (May 14, 2017)
+-----------------------
+- Replaced UIDropDown with NoTaint_UIDropDown
+- Revised iter function to return dungeonLevel value
+- Localization update:
+  - German (pas06)
+  - French (Stuxz)
+
 * v1.06 (May 03, 2017)
 -----------------------
 - Revised the portals' displaying information

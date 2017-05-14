@@ -52,5 +52,5 @@ L["Entrance"] = "入口"
 L["Entrance of %s"] = "%s的入口"
 
 --@end-do-not-package@
---@localization(locale="zhCN", format="lua_additive_table")@
+--@localization(locale="zhCN", format="lua_additive_table", handle-subnamespaces="none", handle-unlocalized="ignore", namespace="")@
 end

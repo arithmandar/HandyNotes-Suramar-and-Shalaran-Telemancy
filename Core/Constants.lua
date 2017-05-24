@@ -66,4 +66,5 @@ constants.events = {
 	-- Appears to fire whenever the player has moved off of a structure 
 	-- such as a bridge or building and onto terrain or another object.
 	"NEW_WMO_CHUNK",
+	"CLOSE_WORLD_MAP",
 };

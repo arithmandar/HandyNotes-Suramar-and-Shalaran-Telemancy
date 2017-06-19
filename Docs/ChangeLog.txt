@@ -3,6 +3,10 @@ $Id$
 Revision History:
 =================
 
+* v1.11 (Jun. 19, 2017)
+-----------------------
+- Fixed icon issue
+
 * v1.10 (May 25, 2017)
 -----------------------
 - Fixed issue that no-lib version was not able to locate LibBabble-SubZone-3.0

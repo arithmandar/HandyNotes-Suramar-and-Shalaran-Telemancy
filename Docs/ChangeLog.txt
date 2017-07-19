@@ -3,6 +3,10 @@ $Id$
 Revision History:
 =================
 
+* v1.12 (Jul. 19, 2017)
+-----------------------
+- Lib update: LibUIDropDownMenu
+
 * v1.11 (Jun. 19, 2017)
 -----------------------
 - Fixed icon issue

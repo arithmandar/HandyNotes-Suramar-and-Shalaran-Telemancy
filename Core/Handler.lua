@@ -303,9 +303,9 @@ end
 function addon:NEW_WMO_CHUNK()
 	addon:Refresh()
 end
-
+--[[
 function addon:CLOSE_WORLD_MAP()
 	closeAllDropdowns()
 end
-
+]]
 -- //////////////////////////////////////////////////////////////////////////

@@ -3,6 +3,12 @@ $Id$
 Revision History:
 =================
 
+* v1.19 (Aug. 06, 2018)
+-----------------------
+- Remove LibUIDropDown
+- Fixed TomTom waypoint's function call issue
+- Convert map date to use MapID
+
 * v1.18 (Jul. 27, 2018)
 -----------------------
 - Fixed RequiredDeps issue

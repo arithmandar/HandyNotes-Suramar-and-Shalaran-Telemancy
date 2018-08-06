@@ -38,7 +38,7 @@
 ## Author: arith
 ## Version: @project-version@
 ## RequiredDeps: HandyNotes
-## OptionalDeps: LibBabble-SubZone-3.0, !LibUIDropDownMenu
+## OptionalDeps: LibBabble-SubZone-3.0
 ## DefaultState: enabled
 ## SavedVariables: HandyNotes_SuramarShalAranTelemancyDB
 ## X-Date: @project-date-iso@

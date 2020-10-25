@@ -56,13 +56,13 @@ local get_point_info = function(point)
 			if IsQuestFlaggedCompleted(point.quest) then
 				icon = work_out_texture(point)
 			else
-				local texture, _, _, left, right, top, bottom = GetAtlasInfo("MagePortalHorde")
+				local info = C_Texture.GetAtlasInfo("MagePortalHorde")
 				icon = {
-					icon = texture,
-					tCoordLeft = left,
-					tCoordRight = right,
-					tCoordTop = top,
-					tCoordBottom = bottom,
+					icon = info.file,
+					tCoordLeft = info.leftTexCoord,
+					tCoordRight = info.rightTexCoord,
+					tCoordTop = info.topTexCoord,
+					tCoordBottom = info.bottomTexCoord,
 				}
 			end
 		elseif (point.type and point.type == "door") then

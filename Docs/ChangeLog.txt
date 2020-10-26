@@ -3,6 +3,10 @@ $Id$
 Revision History:
 =================
 
+* v1.28 (Oct. 26, 2020)
+-----------------------
+- Library update: LibBabble-SubZone
+
 * v1.27 (Oct. 26, 2020)
 -----------------------
 - Fixing packaging issue

@@ -7,9 +7,9 @@ manual-changelog:
 enable-nolib-creation: yes
 
 externals:
-    release/LibBabble-SubZone-3.0: 
+    Libs-release/LibBabble-SubZone-3.0: 
         url: https://repos.wowace.com/wow/libbabble-subzone-3-0/trunk
-    release/LibUIDropDownMenu: 
+    Libs-release/LibUIDropDownMenu: 
         url: https://repos.wowace.com/wow/libuidropdownmenu/trunk/LibUIDropDownMenu
 
 move-folders:

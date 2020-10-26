@@ -3,6 +3,10 @@ $Id$
 Revision History:
 =================
 
+* v1.27 (Oct. 26, 2020)
+-----------------------
+- Fixing packaging issue
+
 * v1.26 (Oct. 25, 2020)
 -----------------------
 - Re-added LibUIDropDown

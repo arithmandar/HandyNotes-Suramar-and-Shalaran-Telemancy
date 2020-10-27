@@ -37,6 +37,8 @@ addon.pluginName 	= private.pluginName
 addon.Name = FOLDER_NAME
 _G.HandyNotes_SuramarShalAranTelemancy = addon
 
+local profile
+
 -- //////////////////////////////////////////////////////////////////////////
 local function work_out_texture(point)
 	if (point.type and private.constants.icon_texture[point.type]) then

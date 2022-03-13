@@ -8,7 +8,7 @@ local _G = getfenv(0)
 local string = _G.string
 local format, gsub = string.format, string.gsub
 local next, wipe, pairs, select, type = next, wipe, pairs, select, type
-local GameTooltip, GetSpellInfo, CreateFrame, UnitClass = _G.GameTooltip, _G.GetSpellInfo, _G.CreateFrame, _G.UnitClass
+local GameTooltip, GetSpellInfo, CreateFrame, UnitClass, UnitRace = _G.GameTooltip, _G.GetSpellInfo, _G.CreateFrame, _G.UnitClass, _G.UnitRace
 --local UIDropDownMenu_CreateInfo, CloseDropDownMenus, UIDropDownMenu_AddButton, ToggleDropDownMenu = L_UIDropDownMenu_CreateInfo, L_CloseDropDownMenus, L_UIDropDownMenu_AddButton, L_ToggleDropDownMenu
 
 local WorldMapTooltip = GameTooltip
@@ -268,6 +268,10 @@ do
 		end
 		-- this will check if any node is for specific class
 		if (point.class and point.class ~= select(2, UnitClass("player"))) then
+			return false
+		end
+		-- this will check if any node is for specific race
+		if (point.class and point.class ~= select(2, UnitRace("player"))) then
 			return false
 		end
 		return true

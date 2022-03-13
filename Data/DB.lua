@@ -72,6 +72,29 @@ DB.points = {
 			type = "flight", 
 			class = "HUNTER" 
 		},
+		-- Nightborne
+		[57968657] = {
+			label = BZ["Shal'Aran"],
+			note = format(L["Portal to %s"], BZ["Shal'Aran"]), 
+			type = "portal", 
+			scale = 0.5,
+			race = "Nightborne" 
+		},
+		[58188733] = {
+			label = BZ["Orgrimmar"],
+			note = format(L["Portal to %s"], BZ["Orgrimmar"]), 
+			type = "portal", 
+			scale = 0.5,
+			race = "Nightborne" 
+		},
+		[58668762] = {
+			label = BZ["Dalaran"],
+			note = format(L["Portal to %s"], BZ["Dalaran"]), 
+			type = "portal", 
+			scale = 0.5,
+			race = "Nightborne" 
+		},
+		
 		-- Common nodes
 		-- Ruins of Elune'eth
 		[36094727] = {  
@@ -520,5 +543,14 @@ DB.points = {
 			type = "door",
 			label = format(L["Entrance of %s"], BZ["The Fel Breach"]), 
 		}, 
+	},
+	[85] = { -- Orgrimmar
+		[40077681] = {
+			label = BZ["The Nighthold"],
+			note = format(L["Portal to %s"], BZ["The Nighthold"]), 
+			type = "portal", 
+			scale = 0.8,
+			race = "Nightborne" 
+		},
 	},
 }

@@ -3,6 +3,10 @@ $Id$
 Revision History:
 =================
 
+* v1.39 (Mar. 14, 2022)
+-----------------------
+- Added Nightborne's teleport points
+
 * v1.38 (Feb. 28, 2022)
 -----------------------
 - Library update - LibUIDropDownMenu

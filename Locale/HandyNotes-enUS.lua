@@ -4,7 +4,6 @@ local AceLocale = LibStub:GetLibrary("AceLocale-3.0");
 local L = AceLocale:NewLocale("HandyNotes_SuramarShalAranTelemancy", "enUS", true, true);
 
 if L then
---@do-not-package@
 -- //////////////////////////
 -- Addon
 -- //////////////////////////
@@ -81,6 +80,5 @@ L["Telemancy to: \n  o Fountain"] = "Telemancy to: \n  o Fountain"
 L["Telemancy to: \n  o Workshop"] = "Telemancy to: \n  o Workshop"
 L["Telemancy to: \n  - Storage"] = "Telemancy to: \n  - Storage"
 L["Telemancy to: \n  - Garden"] = "Telemancy to: \n  - Garden"
---@end-do-not-package@
---@localization(locale="enUS", format="lua_additive_table", handle-subnamespaces="none", handle-unlocalized="ignore", namespace="")@
+
 end

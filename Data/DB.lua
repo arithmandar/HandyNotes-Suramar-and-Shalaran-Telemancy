@@ -94,10 +94,9 @@ DB.points = {
 			scale = 0.5,
 			race = "Nightborne" 
 		},
-		
 		-- Common nodes
 		-- Ruins of Elune'eth
-		[36094727] = {  
+		[36094727] = {
 			quest = 40956, 
 			label = BZ["Ruins of Elune'eth"], 
 			type = "portal", 

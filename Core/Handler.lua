@@ -8,11 +8,17 @@ local _G = getfenv(0)
 local string = _G.string
 local format, gsub = string.format, string.gsub
 local next, wipe, pairs, select, type = next, wipe, pairs, select, type
-local GameTooltip, GetSpellInfo, CreateFrame, UnitClass, UnitRace = _G.GameTooltip, _G.GetSpellInfo, _G.CreateFrame, _G.UnitClass, _G.UnitRace
+local C_Spell = _G.C_Spell
+local GetSpellInfo = C_Spell.GetSpellInfo
+local C_QuestLog = _G.C_QuestLog
+local IsQuestFlaggedCompleted = C_QuestLog.IsQuestFlaggedCompleted
+local GetTitleForQuestID = C_QuestLog.GetTitleForQuestID
+local C_Texture = _G.C_Texture
+local GetAtlasInfo = C_Texture.GetAtlasInfo
+local GameTooltip, CreateFrame, UnitClass, UnitRace = _G.GameTooltip, _G.CreateFrame, _G.UnitClass, _G.UnitRace
 --local UIDropDownMenu_CreateInfo, CloseDropDownMenus, UIDropDownMenu_AddButton, ToggleDropDownMenu = L_UIDropDownMenu_CreateInfo, L_CloseDropDownMenus, L_UIDropDownMenu_AddButton, L_ToggleDropDownMenu
 
 local WorldMapTooltip = GameTooltip
-local IsQuestFlaggedCompleted = C_QuestLog.IsQuestFlaggedCompleted
 
 -- ----------------------------------------------------------------------------
 -- AddOn namespace.
@@ -40,6 +46,11 @@ _G.HandyNotes_SuramarShalAranTelemancy = addon
 
 local profile
 
+local function getQuestTitlebyID(id)
+	local questTitle = GetTitleForQuestID(id)
+	return questTitle
+end
+
 -- //////////////////////////////////////////////////////////////////////////
 local function work_out_texture(point)
 	if (point.type and private.constants.icon_texture[point.type]) then
@@ -60,7 +71,7 @@ local get_point_info = function(point)
 			if IsQuestFlaggedCompleted(point.quest) then
 				icon = work_out_texture(point)
 			else
-				local info = C_Texture.GetAtlasInfo("MagePortalHorde")
+				local info = GetAtlasInfo("MagePortalHorde")
 				icon = {
 					icon = info.file,
 					tCoordLeft = info.leftTexCoord,
@@ -87,6 +98,19 @@ end
 
 local function handle_tooltip(tooltip, point)
 	if point then
+		if (point.quest) then
+			if (profile.query_server) then
+				local questTitle = getQuestTitlebyID(point.quest)
+				if (questTitle) then
+					tooltip:AddLine(QUESTS_COLON..questTitle, 1, 1, 1)
+					tooltip:SetHyperlink(("quest:%d[%%s]"):format(point.quest))
+				end
+			end
+			tooltip:AddDoubleLine(L["QuestID"], point.quest or UNKNOWN, 0.5, 0.5, 1, 0.5, 0.5, 1)
+			if (IsQuestFlaggedCompleted(point.quest)) then
+				tooltip:AddLine(ERR_QUEST_ALREADY_DONE, 0, 1, 0)
+			end
+		end
 		if (point.label) then
 			if (point.npc and profile.query_server) then
 				tooltip:SetHyperlink(("unit:Creature-0-0-0-0-%d"):format(point.npc))
@@ -95,9 +119,9 @@ local function handle_tooltip(tooltip, point)
 			end
 		end
 		if (point.spell) then
-			local spellName = GetSpellInfo(point.spell)
-			if (spellName) then
-				tooltip:AddLine(spellName, 1, 1, 1, true)
+			local spellinofo = GetSpellInfo(point.spell)
+			if (spellinofo and spellinofo.name) then
+				tooltip:AddLine(spellinofo.name, 1, 1, 1, true)
 			end
 		end
 		if (point.note and profile.show_note) then

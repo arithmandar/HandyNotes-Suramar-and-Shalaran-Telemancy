@@ -1,11 +1,10 @@
-﻿-- $Id$
+-- $Id$
 
 local L = LibStub("AceLocale-3.0"):NewLocale("HandyNotes_SuramarShalAranTelemancy", "zhTW", false)
 
 if not L then return end
 
 if L then
---@do-not-package@
 -- //////////////////////////
 -- Addon
 -- //////////////////////////
@@ -26,9 +25,9 @@ L["The alpha transparency of the icons"] = "圖示的透明度"
 -- What to Display
 L["What to display"] = "哪些要被呈現"
 L["These settings control what type of icons to be displayed."] = "以下的設定控制了哪些類型的節點要被顯示。"
+--L["Telemetry Lab"] = "Telemetry Lab"
 L["Shal'Aran Portals"] = "沙亞蘭傳送門"
 L["Show portals inside Shal'Aran."] = "顯示在沙亞蘭裡的傳送門位置。"
---L["Telemetry Lab"] = "遙距勘測實驗室"
 L["Show Telemetry Lab related telemancies, mainly quest related from Oculeth's quest: \"The Delicate Art of Telemancy\"."] = "顯示遙距勘測實驗室相關的傳送點，主線任務為歐庫雷斯提供的：「傳送師的精湛技藝」。"
 L["Leyline Entrances"] = "脈能入口"
 L["Show entrances which lead to the leyline."] = "顯示所有脈能站的入口。"
@@ -58,7 +57,7 @@ L["Entrance of %s"] = "%s的入口"
 -- //////////////////////////
 -- Hunter
 -- //////////////////////////
-L["Great Eagle"] = "巨鷹"
+L["Great Eagle"] = "巨鷹" -- 108552
 
 -- //////////////////////////
 -- Mage
@@ -82,6 +81,5 @@ L["Telemancy to: \n  o Fountain"] = "傳送到：\n  o 噴泉"
 L["Telemancy to: \n  o Workshop"] = "傳送到：\n  o 工坊"
 L["Telemancy to: \n  - Storage"] = "傳送到：\n  - 儲藏室"
 L["Telemancy to: \n  - Garden"] = "傳送到：\n  - 花園"
---@end-do-not-package@
---@localization(locale="zhTW", format="lua_additive_table", handle-subnamespaces="none", handle-unlocalized="ignore", namespace="")@
+
 end

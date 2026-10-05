@@ -1,6 +1,4 @@
-﻿-- $Id$
-
-local AceLocale = LibStub:GetLibrary("AceLocale-3.0");
+﻿local AceLocale = LibStub:GetLibrary("AceLocale-3.0");
 local L = AceLocale:NewLocale("HandyNotes_SuramarShalAranTelemancy", "enUS", true, true);
 
 if L then

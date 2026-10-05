@@ -1,13 +1,10 @@
--- $Id$
 -----------------------------------------------------------------------
 -- Upvalued Lua API.
 -----------------------------------------------------------------------
 -- Functions
 local _G = getfenv(0)
 -- Libraries
-local string = _G.string
-local format, gsub = string.format, string.gsub
-local next, wipe, pairs, select, type = next, wipe, pairs, select, type
+local next, pairs, select = next, pairs, select
 local C_Spell = _G.C_Spell
 local GetSpellInfo = C_Spell.GetSpellInfo
 local C_QuestLog = _G.C_QuestLog
@@ -15,8 +12,7 @@ local IsQuestFlaggedCompleted = C_QuestLog.IsQuestFlaggedCompleted
 local GetTitleForQuestID = C_QuestLog.GetTitleForQuestID
 local C_Texture = _G.C_Texture
 local GetAtlasInfo = C_Texture.GetAtlasInfo
-local GameTooltip, CreateFrame, UnitClass, UnitRace = _G.GameTooltip, _G.CreateFrame, _G.UnitClass, _G.UnitRace
---local UIDropDownMenu_CreateInfo, CloseDropDownMenus, UIDropDownMenu_AddButton, ToggleDropDownMenu = L_UIDropDownMenu_CreateInfo, L_CloseDropDownMenus, L_UIDropDownMenu_AddButton, L_ToggleDropDownMenu
+local GameTooltip, UnitClass, UnitRace = _G.GameTooltip, _G.UnitClass, _G.UnitRace
 
 local WorldMapTooltip = GameTooltip
 

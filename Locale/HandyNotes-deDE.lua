@@ -1,5 +1,3 @@
--- $Id$
-
 local L = LibStub("AceLocale-3.0"):NewLocale("HandyNotes_SuramarShalAranTelemancy", "deDE", false)
 
 if not L then return end
@@ -80,6 +78,6 @@ L["Telemancy to: \n  o Telemetry Lab\n  o Garden\n  x Breakfast Nook"] = "Telema
 L["Telemancy to: \n  o Fountain"] = "Telemantie nach: \n  o Brunnen"
 L["Telemancy to: \n  o Workshop"] = "Telemantie nach:\n  o Werkstatt"
 L["Telemancy to: \n  - Storage"] = "Telemantie nach: \n  - Lager"
--- L["Telemancy to: \n  - Garden"] = "Telemancy to: \n  - Garden"
+L["Telemancy to: \n  - Garden"] = "Telemantie nach: \n  - Garten"
 
 end

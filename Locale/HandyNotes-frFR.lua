@@ -1,6 +1,4 @@
-﻿-- $Id$
-
-local L = LibStub("AceLocale-3.0"):NewLocale("HandyNotes_SuramarShalAranTelemancy", "frFR", false)
+﻿local L = LibStub("AceLocale-3.0"):NewLocale("HandyNotes_SuramarShalAranTelemancy", "frFR", false)
 
 if not L then return end
 
@@ -26,7 +24,7 @@ L["The alpha transparency of the icons"] = "La transparence alpha des icônes"
 -- What to Display
 L["What to display"] = "Éléments à afficher"
 L["These settings control what type of icons to be displayed."] = "Ces paramètres contrôlent les types d’icônes affichés sur la carte du monde et la minicarte."
---L["Telemetry Lab"] = "Laboratoire de télémétrie"
+--L["Telemetry Lab"] = "Telemetry Lab"
 L["Shal'Aran Portals"] = "Portails de Shal'Aran"
 L["Show portals inside Shal'Aran."] = "Affiche les portails à l’intérieur de Shal'Aran."
 L["Show Telemetry Lab related telemancies, mainly quest related from Oculeth's quest: \"The Delicate Art of Telemancy\"."] = "Affiche les itinéraires de télémancie liés au laboratoire de télémétrie, principalement ceux associés à la quête d’Oculeth : « L’art délicat de la télémancie »."

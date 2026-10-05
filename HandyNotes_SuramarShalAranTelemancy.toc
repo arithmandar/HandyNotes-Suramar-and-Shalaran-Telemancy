@@ -1,23 +1,28 @@
 ﻿## Interface: 120100
 ## Title: HandyNotes - Suramar and Shal'Aran Telemancy
-## Title-deDE: HandyNotes - Suramar- und Shal'Aran-Telemantie
-## Title-ruRU: HandyNotes - Телемантические маяки Сурамара и Шал'Арана
-## Title-zhCN: HandyNotes - 苏拉玛东与沙尔艾兰的传送
-## Title-zhTW: HandyNotes - 蘇拉瑪爾與沙亞蘭的傳送
 ## Notes: Shows the telemancy between Shal'Aran and nodes in Suramar
-## Notes-deDE: Zeigt die Telemantie zwischen Shal'Aran und Knoten in Suramar
-## Notes-ruRU: Показывает телемантические маяки между Шал'Араном и заметки в Сурамаре
-## Notes-zhCN: 显示在沙尔艾兰与苏拉玛尔之间的各个传送点位置
-## Notes-zhTW: 顯示在沙亞蘭與蘇拉瑪爾之間的各個傳送點位置
-## Author: arith
-## Version: @project-version@
-## RequiredDeps: HandyNotes
-## OptionalDeps: LibBabble-SubZone-3.0, !LibUIDropDownMenu
-## DefaultState: enabled
-## SavedVariables: HandyNotes_SuramarShalAranTelemancyDB
-## X-Date: @project-date-iso@
-## X-License: GPLv2
-## X-Category: Map
+## Title-deDE: HandyNotes - Suramar und Shal'Arans Telemanzie
+## Notes-deDE: Zeigt die Telemanzie zwischen Shal'Aran und den Knoten in Suramar
+## Title-esES: HandyNotes - Telemanía de Suramar y Shal'Aran
+## Notes-esES: Muestra la telemanía entre Shal'Aran y los nodos de Suramar
+## Title-esES: HandyNotes - Telemanía de Suramar y Shal'Aran
+## Notes-esES: Muestra la telemanía entre Shal'Aran y los nodos de Suramar
+## Title-esMX: HandyNotes - Telemanía de Suramar y Shal'Aran
+## Notes-esMX: Muestra la telemanía entre Shal'Aran y los nodos de Suramar
+## Title-frFR: HandyNotes - Télémancie de Suramar et Shal'Aran
+## Notes-frFR: Affiche la télémancie entre Shal'Aran et les nœuds de Suramar
+## Title-itIT: HandyNotes - Telemanzia di Suramar e Shal'Aran
+## Notes-itIT: Mostra la telemanzia tra Shal'Aran e i nodi di Suramar
+## Title-koKR: HandyNotes - 수라마르와 샬아란의 순간이동술
+## Notes-koKR: 샬아란과 수라마르의 거점 사이의 순간이동술을 표시합니다
+## Title-ptBR: HandyNotes - Telemancia de Suramar e Shal'Aran
+## Notes-ptBR: Mostra a telemancia entre Shal'Aran e os pontos de Suramar
+## Title-ruRU: HandyNotes — Телемантия Сурамара и Шал'Арана
+## Notes-ruRU: Показывает телемантию между Шал'Араном и узлами в Сурамаре
+## Title-zhCN: HandyNotes - 苏拉玛与沙尔艾兰传送
+## Notes-zhCN: 显示沙尔艾兰与苏拉玛各传送节点之间的传送连接
+## Title-zhTW: HandyNotes - 蘇拉瑪與沙亞蘭傳送
+## Notes-zhTW: 顯示沙亞蘭與蘇拉瑪各傳送節點之間的傳送連結
 ## Category: Map
 ## Category-deDE: Karte
 ## Category-esES: Mapa
@@ -30,6 +35,18 @@
 ## Category-zhCN: 地图
 ## Category-zhTW: 地圖
 ## IconTexture: Interface\icons\Inv_misc_suramarcache
+## Author: arith
+## Version: @project-version@
+## RequiredDeps: HandyNotes
+## OptionalDeps: LibBabble-SubZone-3.0, !LibUIDropDownMenu
+## DefaultState: enabled
+## SavedVariables: HandyNotes_SuramarShalAranTelemancyDB
+## X-Date: @project-date-iso@
+## X-License: GPLv2
+## X-Category: Map
+## X-Curse-Project-ID: 265782
+## X-WoWI-ID: 27241
+
 
 Libs\Libs.xml
 Locale\Locales.xml

@@ -1,7 +1,9 @@
-$Id$
-
 Revision History:
 =================
+
+* v1.46 (Oct. 05, 2026)
+-----------------------
+- Migrated from CurseForge to GitHub, and added auto-packaging for both CurseForge and WoWInterface
 
 * v1.45 (Sep. 24, 2026)
 -----------------------

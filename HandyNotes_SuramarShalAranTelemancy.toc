@@ -1,4 +1,4 @@
-﻿## Interface: 120100
+﻿## Interface: 120105
 ## Title: HandyNotes - Suramar and Shal'Aran Telemancy
 ## Notes: Shows the telemancy between Shal'Aran and nodes in Suramar
 ## Title-deDE: HandyNotes - Suramar und Shal'Arans Telemanzie

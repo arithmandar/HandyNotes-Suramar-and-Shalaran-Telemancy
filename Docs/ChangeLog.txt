@@ -1,6 +1,10 @@
 Revision History:
 =================
 
+* v1.47 (Oct. 15, 2026)
+-----------------------
+- Toc update to support WoW 12.1.5
+
 * v1.46 (Oct. 05, 2026)
 -----------------------
 - Migrated from CurseForge to GitHub, and added auto-packaging for both CurseForge and WoWInterface
